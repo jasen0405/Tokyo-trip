@@ -148,7 +148,7 @@ main{max-width:1080px;margin:0 auto;padding:22px 20px 70px}
 <body>
 <header><div class="head-inner">
   <div class="hanko jp">本日も<br>営業中</div>
-  <div class="eyebrow">TOKYO · 7/22 水 — 7/25 土</div>
+  <div class="eyebrow">TOKYO · 7/22 水 — 7/25 土 · v3</div>
   <h1>도쿄 미식첩 <span class="jp">東京美食帖</span></h1>
   <div class="subline"><b>정휘 부부 御一行様</b> — 일차별 동선 + 지역별 장르 가이드</div>
   <div class="head-meta">
@@ -165,7 +165,7 @@ main{max-width:1080px;margin:0 auto;padding:22px 20px 70px}
 <div id="map-wrap"><div class="map-frame" id="map-frame">
   <div class="zoom-btns" id="zoom-btns"><button id="zin" aria-label="확대">＋</button><button id="zout" aria-label="축소">－</button></div>
   <div class="legend-fixed" id="legend"></div>
-  <div id="netbadge">🖼 그림지도 (오프라인)</div>
+  <div id="netbadge">⏳ 지도 준비 중…</div>
   <svg id="emap" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-label="도쿄 그림지도"></svg>
   <div id="lmap"></div>
 </div>
@@ -219,13 +219,14 @@ svg.addEventListener('pointerdown',e=>{svg.setPointerCapture(e.pointerId);touche
 svg.addEventListener('pointermove',e=>{if(!touches.has(e.pointerId))return;touches.set(e.pointerId,{x:e.clientX,y:e.clientY});const rect=svg.getBoundingClientRect();if(touches.size===1&&dragStart){const sx=vb.w/rect.width;vb.x=dragStart.vx-(e.clientX-dragStart.cx)*sx;vb.y=dragStart.vy-(e.clientY-dragStart.cy)*sx;clampVB();applyVB();}else if(touches.size===2){const t=[...touches.values()];const d=Math.hypot(t[0].x-t[1].x,t[0].y-t[1].y);if(lastDist>0){const mid=svgPoint((t[0].x+t[1].x)/2,(t[0].y+t[1].y)/2);zoomAt(mid.x,mid.y,lastDist/d);}lastDist=d;}});
 const endT=e=>{touches.delete(e.pointerId);dragStart=null;lastDist=0;};svg.addEventListener('pointerup',endT);svg.addEventListener('pointercancel',endT);
 let mode='svg',lmap=null;
-function tryLeaflet(){const css=document.createElement('link');css.rel='stylesheet';css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';document.head.appendChild(css);const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';s.onload=initLeaflet;s.onerror=()=>{document.getElementById('netbadge').textContent='🖼 그림지도 (지도 로드 불가)';};document.head.appendChild(s);}
-function initLeaflet(){try{const div=document.getElementById('lmap');lmap=L.map(div,{scrollWheelZoom:true,zoomControl:true});const tile=L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'&copy; OSM &copy; CARTO',maxZoom:19});let swapped=false;
-  const swap=()=>{if(swapped)return;swapped=true;div.style.visibility='visible';svg.style.visibility='hidden';document.getElementById('zoom-btns').style.display='none';document.getElementById('netbadge').textContent='🗺 실제 지도 (온라인)';mode='leaflet';buildLeafletLayer();lmap.invalidateSize();fitDay(currentDay);highlight(currentRegion);};
+function tryLeaflet(){const nb=document.getElementById('netbadge');nb.textContent='지도 불러오는 중…';const css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.appendChild(css);const s=document.createElement('script');s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';s.onload=initLeaflet;s.onerror=()=>{nb.textContent='🖼 그림지도 (스크립트 차단)';};document.head.appendChild(s);}
+function initLeaflet(){const nb=document.getElementById('netbadge');try{const div=document.getElementById('lmap');lmap=L.map(div,{scrollWheelZoom:true,zoomControl:true});nb.textContent='지도 타일 요청 중…';const tile=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap',maxZoom:19,crossOrigin:true});let swapped=false;
+  const swap=()=>{if(swapped)return;swapped=true;div.style.visibility='visible';svg.style.visibility='hidden';document.getElementById('zoom-btns').style.display='none';nb.textContent='🗺 실제 지도 (온라인)';mode='leaflet';buildLeafletLayer();lmap.invalidateSize();fitDay(currentDay);highlight(currentRegion);};
   tile.on('tileload',swap);tile.on('load',swap);
+  tile.on('tileerror',()=>{nb.textContent='🖼 그림지도 (타일 차단)';});
   tile.addTo(lmap);lmap.setView([35.675,139.745],12);
   setTimeout(()=>{lmap&&lmap.invalidateSize();},300);
-  setTimeout(()=>{if(!swapped){try{lmap.remove()}catch(e){}lmap=null;document.getElementById('netbadge').textContent='🖼 그림지도 (오프라인)';}},9000);}catch(e){}}
+  setTimeout(()=>{if(!swapped){try{lmap.remove()}catch(e){}lmap=null;if(!nb.textContent.includes('차단'))nb.textContent='🖼 그림지도 (시간초과)';}},9000);}catch(e){nb.textContent='🖼 그림지도 (오류)';}}
 const lZones={};
 function buildLeafletLayer(){allPins.forEach(p=>{const gen=GENRES[p.gkey];const icon=L.divIcon({className:'',html:`<div class="lpin" style="background:${gen.color}"><span>${gen.icon}</span></div>`,iconSize:[26,26],iconAnchor:[13,24],popupAnchor:[0,-22]});p.lm=L.marker([p.lat,p.lng],{icon}).addTo(lmap).bindPopup(`<b>${p.name}</b><span class="jp">${p.jp}</span> · ${p.sub}`);p.lm.on('click',()=>select(p));});L.marker([HOTEL.lat,HOTEL.lng],{icon:L.divIcon({className:'',html:'<div class="lhotel">★</div>',iconSize:[30,30],iconAnchor:[15,15]}),zIndexOffset:2000}).addTo(lmap).bindPopup('<b>미츠이 가든 호텔 긴자 프리미어</b>🏨 베이스캠프');REGIONS.forEach(r=>{if(regionLL[r.id].length)lZones[r.id]=L.rectangle(L.latLngBounds(regionLL[r.id]).pad(0.25),{color:r.hex,weight:2,dashArray:'6 6',fillColor:r.hex,fillOpacity:0.06,interactive:false});});}
 function fitDay(dayId){const day=DAYS.find(d=>d.id===dayId);if(!day)return;const pts=[];day.regions.forEach(rid=>(regionLL[rid]||[]).forEach(ll=>pts.push(ll)));if(!pts.length)return;if(mode==='leaflet'&&lmap){lmap.fitBounds(pts,{padding:[30,30],maxZoom:14});}else{const xs=pts.map(ll=>PX(ll[1])),ys=pts.map(ll=>PY(ll[0]));const pad=80;const minx=Math.min(...xs)-pad,maxx=Math.max(...xs)+pad,miny=Math.min(...ys)-pad,maxy=Math.max(...ys)+pad;vb.w=Math.max(maxx-minx,(maxy-miny)*W/H);vb.h=vb.w*H/W;vb.x=(minx+maxx)/2-vb.w/2;vb.y=(miny+maxy)/2-vb.h/2;clampVB();applyVB();}}
