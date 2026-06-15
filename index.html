@@ -1,75 +1,86 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ko"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>東京美食帖 — 도쿄 3박4일 미식첩</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800;900&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ai:#1d2a44;--ai-deep:#141d31;--shu:#c73e2d;
-  --washi:#f5efe1;--paper:#fdfaf2;--line:#e3d8c2;
-  --kin:#c9a227;--sumi:#2b2722;--muted:#857a64;--mizu:#bdd5d2;
-}
+:root{--ai:#1d2a44;--ai-deep:#141d31;--shu:#c73e2d;--washi:#f5efe1;--paper:#fdfaf2;--line:#e3d8c2;--kin:#c9a227;--sumi:#2b2722;--muted:#857a64;--mizu:#bdd5d2}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo',sans-serif;background:repeating-linear-gradient(0deg,transparent 0 23px,rgba(43,39,34,.022) 23px 24px),var(--washi);color:var(--sumi);line-height:1.66}
 .jp{font-family:'Noto Serif JP','Noto Serif KR',serif}
-header{position:relative;color:var(--washi);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='42' viewBox='0 0 84 42'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='1.6'%3E%3Cpath d='M0 42a21 21 0 0 1 42 0M42 42a21 21 0 0 1 42 0M-21 21a21 21 0 0 1 42 0M21 21a21 21 0 0 1 42 0M63 21a21 21 0 0 1 42 0M0 42a13 13 0 0 1 26 0M8 42a13 13 0 0 1 26 0'/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse 55% 80% at 82% -5%,rgba(201,162,39,.20),transparent 60%),linear-gradient(180deg,var(--ai-deep),var(--ai));padding:36px 20px 0}
+header{position:relative;color:var(--washi);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='42' viewBox='0 0 84 42'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='1.6'%3E%3Cpath d='M0 42a21 21 0 0 1 42 0M42 42a21 21 0 0 1 42 0M-21 21a21 21 0 0 1 42 0M21 21a21 21 0 0 1 42 0M63 21a21 21 0 0 1 42 0M0 42a13 13 0 0 1 26 0M8 42a13 13 0 0 1 26 0'/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse 55% 80% at 82% -5%,rgba(201,162,39,.20),transparent 60%),linear-gradient(180deg,var(--ai-deep),var(--ai));padding:34px 20px 0}
 .head-inner{max-width:1080px;margin:0 auto;position:relative}
 .eyebrow{font-size:12px;letter-spacing:.4em;color:var(--kin);font-weight:700;margin-bottom:8px}
-h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(27px,4.6vw,42px);line-height:1.22}
+h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(26px,4.4vw,40px);line-height:1.22}
 h1 .jp{color:var(--kin);font-weight:900}
 .subline{font-size:13.5px;color:rgba(245,239,225,.78);margin-top:8px}
 .subline b{color:#fff}
-.hanko{position:absolute;top:-4px;right:0;width:74px;height:74px;border:3px solid var(--shu);border-radius:10px;transform:rotate(7deg);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Noto Serif JP',serif;font-weight:900;font-size:14px;line-height:1.3;color:var(--shu);background:rgba(199,62,45,.07);letter-spacing:.08em;user-select:none}
-@media(max-width:640px){.hanko{width:60px;height:60px;font-size:11.5px;top:-10px}}
-.head-meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px}
+.hanko{position:absolute;top:-4px;right:0;width:72px;height:72px;border:3px solid var(--shu);border-radius:10px;transform:rotate(7deg);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Noto Serif JP',serif;font-weight:900;font-size:13.5px;line-height:1.3;color:var(--shu);background:rgba(199,62,45,.07);letter-spacing:.08em;user-select:none}
+@media(max-width:640px){.hanko{width:58px;height:58px;font-size:11px;top:-10px}}
+.head-meta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 8px}
 .chip{font-size:12.5px;padding:5px 13px;border:1px solid rgba(245,239,225,.26);border-radius:999px;color:rgba(245,239,225,.92)}
 .chip b{color:var(--kin)}
-.omikuji{margin:10px 0 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.omikuji{margin:10px 0 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .omikuji button{font-weight:700;font-size:12.5px;background:var(--shu);color:#fff;border:none;border-radius:999px;padding:7px 16px;cursor:pointer;box-shadow:0 3px 0 #8e2a1d;transition:transform .1s;font-family:inherit}
 .omikuji button:active{transform:translateY(2px);box-shadow:0 1px 0 #8e2a1d}
 .omikuji .result{font-size:13px;color:rgba(245,239,225,.92)}
 .omikuji .result b{color:var(--kin);font-family:'Noto Serif JP',serif;margin-right:6px}
-.hotel{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:8px;padding:9px 14px;margin-bottom:24px;font-size:12.5px}
-.hotel .pin{font-size:14px}
-.hotel b{color:var(--kin)}
-.hotel .jp{color:rgba(245,239,225,.7);font-size:11.5px}
+.hotel{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:8px;padding:9px 14px;margin-bottom:18px;font-size:12.5px}
+.hotel b{color:var(--kin)} .hotel .jp{color:rgba(245,239,225,.7);font-size:11.5px}
 .hotel a{margin-left:auto;color:#fff;background:var(--ai);text-decoration:none;border-radius:6px;padding:5px 11px;font-weight:700;font-size:11.5px;white-space:nowrap}
-.nav-rope{max-width:1080px;margin:0 auto;border-top:2px solid rgba(245,239,225,.30)}
-nav{display:flex;gap:12px;overflow-x:auto;padding:0 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+/* 상위탭: 일차 */
+.daynav{max-width:1080px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:0 2px 0;scrollbar-width:none}
+.daynav::-webkit-scrollbar{display:none}
+.daytab{flex:0 0 auto;cursor:pointer;border:none;background:rgba(245,239,225,.08);color:rgba(245,239,225,.8);border-radius:12px 12px 0 0;padding:11px 18px 12px;font-family:inherit;font-weight:800;font-size:14.5px;display:flex;flex-direction:column;align-items:center;gap:1px;border-bottom:3px solid transparent;transition:background .2s,color .2s}
+.daytab small{font-size:10px;font-weight:500;opacity:.7;letter-spacing:.02em}
+.daytab .dd{font-family:'Noto Serif JP',serif;font-size:10px;opacity:.65}
+.daytab:hover{background:rgba(245,239,225,.14)}
+.daytab.on{background:var(--washi);color:var(--sumi);border-bottom-color:var(--dc)}
+.daytab.on small,.daytab.on .dd{opacity:.7}
+.daytab:focus-visible{outline:2px solid var(--kin);outline-offset:2px}
+/* 일차 동선 배너 */
+#dayroute{max-width:1080px;margin:0 auto;background:var(--washi);border-bottom:1px solid var(--line)}
+.droute-in{padding:14px 22px 16px;display:flex;gap:14px;align-items:flex-start}
+.droute-badge{flex:0 0 auto;width:54px;height:54px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:18px;line-height:1;font-family:'Noto Serif KR',serif}
+.droute-badge small{font-size:9px;font-weight:600;opacity:.9;margin-top:2px}
+.droute-body{flex:1;min-width:0}
+.droute-body .t{font-weight:800;font-size:14px;margin-bottom:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.droute-body .t .date{font-family:'Noto Serif JP',serif;font-size:11.5px;color:var(--muted);font-weight:600}
+.droute-body .desc{font-size:13px;color:#46412f}
+/* 하위탭: 지역 */
+.nav-rope{max-width:1080px;margin:0 auto;background:var(--ai);padding-top:2px}
+nav{display:flex;gap:11px;overflow-x:auto;padding:9px 6px 0;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
 .tab{flex:0 0 auto;cursor:pointer;border:none;background:none;color:inherit;display:flex;flex-direction:column;align-items:center;padding:0 2px;margin-top:-2px}
-.tab .string{width:2px;height:13px;background:rgba(245,239,225,.45)}
-.tab .lantern{min-width:98px;padding:12px 12px 14px;border-radius:38% 38% 40% 40%/26% 26% 34% 34%;background:repeating-linear-gradient(180deg,rgba(0,0,0,.10) 0 2px,transparent 2px 11px),var(--rc);color:#fff;text-align:center;font-weight:800;font-size:13px;line-height:1.3;border:2px solid rgba(0,0,0,.18);opacity:.55;filter:saturate(.55);transition:opacity .2s,filter .2s,box-shadow .25s,transform .15s}
-.tab .lantern small{display:block;font-size:9.5px;font-weight:500;opacity:.85;letter-spacing:.03em}
+.tab .string{width:2px;height:11px;background:rgba(245,239,225,.45)}
+.tab .lantern{min-width:96px;padding:11px 13px 13px;border-radius:38% 38% 40% 40%/26% 26% 34% 34%;background:repeating-linear-gradient(180deg,rgba(0,0,0,.10) 0 2px,transparent 2px 11px),var(--rc);color:#fff;text-align:center;font-weight:800;font-size:13px;line-height:1.3;border:2px solid rgba(0,0,0,.18);opacity:.55;filter:saturate(.55);transition:opacity .2s,filter .2s,box-shadow .25s,transform .15s}
+.tab .lantern small{display:block;font-size:9.5px;font-weight:500;opacity:.85;letter-spacing:.02em}
 .tab .lantern .kanji{font-family:'Noto Serif JP',serif;font-size:11px;opacity:.8;letter-spacing:.18em;display:block}
 .tab:hover .lantern{opacity:.8}
-.tab.on .lantern{opacity:1;filter:saturate(1);box-shadow:0 0 26px 4px rgba(255,196,90,.45),inset 0 -8px 16px rgba(0,0,0,.15);transform:translateY(2px)}
+.tab.on .lantern{opacity:1;filter:saturate(1);box-shadow:0 0 24px 4px rgba(255,196,90,.45),inset 0 -8px 16px rgba(0,0,0,.15);transform:translateY(2px)}
 .tab:focus-visible .lantern{outline:2px solid var(--kin);outline-offset:3px}
 #map-wrap{max-width:1080px;margin:0 auto;padding:16px 20px 0}
 .map-frame{border:1px solid var(--line);border-radius:4px;background:var(--paper);padding:8px;box-shadow:0 12px 30px rgba(20,29,49,.14);position:relative}
 .map-frame::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:2px;pointer-events:none;z-index:450}
-#emap{display:block;width:100%;height:50vh;min-height:340px;border-radius:2px;background:var(--washi);touch-action:none;cursor:grab;user-select:none}
+#emap{display:block;width:100%;height:48vh;min-height:330px;border-radius:2px;background:var(--washi);touch-action:none;cursor:grab;user-select:none}
 #emap:active{cursor:grabbing}
 #lmap{position:absolute;inset:8px;z-index:400;visibility:hidden;border-radius:2px}
 .zoom-btns{position:absolute;top:18px;left:18px;z-index:460;display:flex;flex-direction:column;gap:6px}
 .zoom-btns button{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:var(--paper);font-size:18px;font-weight:700;color:var(--sumi);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
 .zoom-btns button:active{transform:scale(.94)}
-.legend-fixed{position:absolute;bottom:18px;left:18px;z-index:460;background:rgba(253,250,242,.93);border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:11px;line-height:1.7;box-shadow:0 2px 10px rgba(0,0,0,.12);max-width:160px}
+.legend-fixed{position:absolute;bottom:18px;left:18px;z-index:460;background:rgba(253,250,242,.93);border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:11px;line-height:1.7;box-shadow:0 2px 10px rgba(0,0,0,.12);max-width:150px}
 .legend-fixed .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:-1px;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
 #netbadge{position:absolute;top:18px;right:18px;z-index:460;font-size:10.5px;font-weight:700;background:rgba(253,250,242,.92);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
 .map-caption{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--muted);padding:7px 4px 0}
 .map-caption .jp{letter-spacing:.25em}
 #infobar{margin-top:10px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 14px;font-size:13px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-height:48px}
-#infobar .ph{color:var(--muted)}
-#infobar b{font-size:14px}
+#infobar .ph{color:var(--muted)} #infobar b{font-size:14px}
 #infobar .cat{font-size:10.5px;font-weight:700;color:#fff;border-radius:4px;padding:2px 7px}
 #infobar a{margin-left:auto;font-size:12px;font-weight:700;color:#fff;background:var(--ai);text-decoration:none;border-radius:6px;padding:6px 12px;white-space:nowrap}
 .pin-g{cursor:pointer}
 .pin-g .pin-body{stroke:#fff;stroke-width:2.5;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3));transition:opacity .25s}
-.pin-g.dim .pin-body{opacity:.18;filter:grayscale(1)}
+.pin-g.dim .pin-body{opacity:.16;filter:grayscale(1)}
 .pin-g.dim text{opacity:0}
 .pin-g text{font-size:11px;text-anchor:middle;pointer-events:none}
 .pin-g .ring{fill:none;stroke:var(--shu);stroke-width:3;opacity:0;pointer-events:none}
@@ -79,33 +90,30 @@ nav::-webkit-scrollbar{display:none}
 .water-label{font-family:'Noto Serif JP',serif;fill:#7da6a1;pointer-events:none}
 .lpin{width:26px;height:26px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;transition:opacity .25s,filter .25s}
 .lpin span{transform:rotate(45deg);font-size:12px;line-height:1}
-.lpin.dim{opacity:.2;filter:grayscale(1)}
-.lpin.dim span{opacity:0}
+.lpin.dim{opacity:.18;filter:grayscale(1)} .lpin.dim span{opacity:0}
 .lhotel{width:30px;height:30px;border-radius:50%;background:var(--kin);border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;font-size:15px}
 .leaflet-popup-content{font-family:'Noto Sans KR',sans-serif;font-size:13px;line-height:1.5;margin:10px 14px}
 .leaflet-popup-content b{display:block;font-size:14px;margin-bottom:2px}
-main{max-width:1080px;margin:0 auto;padding:24px 20px 70px}
-.panel{display:none;animation:fade .3s ease}
-.panel.on{display:block}
+main{max-width:1080px;margin:0 auto;padding:22px 20px 70px}
+.panel{display:none;animation:fade .3s ease}.panel.on{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .region-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
 .kanji-tag{writing-mode:vertical-rl;font-family:'Noto Serif JP',serif;font-weight:900;font-size:15px;letter-spacing:.3em;color:#fff;padding:10px 6px;border-radius:3px;line-height:1;flex:0 0 auto;box-shadow:2px 2px 0 rgba(43,39,34,.18)}
-.region-head h2{font-family:'Noto Serif KR',serif;font-size:clamp(21px,3vw,27px);font-weight:900;line-height:1.3}
-.region-head .sub{font-size:12px;font-weight:700;letter-spacing:.14em}
-.intro{font-size:15px;color:#46412f;max-width:800px;margin:4px 0 14px}
-.intro .joke{color:var(--muted);font-size:13.5px}
+.region-head h2{font-family:'Noto Serif KR',serif;font-size:clamp(20px,2.8vw,26px);font-weight:900;line-height:1.3}
+.region-head .sub{font-size:12px;font-weight:700;letter-spacing:.13em}
+.intro{font-size:14.5px;color:#46412f;max-width:800px;margin:4px 0 14px}
+.intro .joke{color:var(--muted);font-size:13px}
 .route{display:flex;align-items:center;gap:9px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--rc);border-radius:7px;padding:10px 14px;margin-bottom:8px;font-size:13px;flex-wrap:wrap}
 .route .from{font-weight:700;color:var(--muted);font-size:11.5px}
 .route .line{font-weight:800;color:var(--rc)}
 .route .time{margin-left:auto;font-weight:700;background:rgba(43,39,34,.06);border-radius:999px;padding:2px 10px;font-size:11.5px}
 .bonus{background:linear-gradient(120deg,rgba(201,162,39,.16),rgba(201,162,39,.05));border:1px solid rgba(201,162,39,.45);border-radius:7px;padding:9px 14px;margin-bottom:22px;font-size:13px}
 .bonus b{color:#a07d10}
-.bonus .jp{font-family:'Noto Serif JP',serif;color:var(--muted);font-size:12px}
-.genre-block{margin-top:22px}
-.genre-head{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.genre-block{margin-top:20px}
+.genre-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .genre-head .ic{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex:0 0 auto}
 .genre-head h3{font-size:16px;font-weight:900;font-family:'Noto Serif KR',serif}
-.genre-head .jp{font-family:'Noto Serif JP',serif;font-size:11.5px;color:var(--muted);letter-spacing:.18em}
+.genre-head .jp{font-family:'Noto Serif JP',serif;font-size:11.5px;color:var(--muted);letter-spacing:.16em}
 .genre-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(305px,1fr));gap:11px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px 12px;position:relative;cursor:pointer;transition:box-shadow .2s,transform .15s;display:flex;gap:13px;align-items:flex-start;border-left:3px solid var(--gc,#ccc)}
@@ -121,9 +129,7 @@ main{max-width:1080px;margin:0 auto;padding:24px 20px 70px}
 .card .desc{font-size:13px;color:#4a4536;margin-top:4px}
 .card .meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
 .badge{font-size:10.5px;font-weight:700;padding:2.5px 8px;border-radius:999px;background:rgba(43,39,34,.06);color:#5f584a}
-.badge.beer{background:var(--ai);color:#fff}
-.badge.warn{background:#f1e3cf;color:#8a5b20}
-.badge.star{background:var(--kin);color:#fff}
+.badge.beer{background:var(--ai);color:#fff} .badge.warn{background:#f1e3cf;color:#8a5b20} .badge.star{background:var(--kin);color:#fff}
 .gmap{margin-left:auto;font-size:11px;font-weight:700;color:var(--ai);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:#fff}
 .gmap:hover{border-color:var(--ai)}
 .cat-tag{position:absolute;top:12px;right:13px;font-size:10px;font-weight:700;color:#fff;border-radius:4px;padding:2.5px 7px;letter-spacing:.03em}
@@ -134,337 +140,72 @@ main{max-width:1080px;margin:0 auto;padding:24px 20px 70px}
 .note{margin-top:36px;color:rgba(245,239,225,.92);border-radius:8px;padding:22px 24px;font-size:13.5px;background:linear-gradient(180deg,var(--ai),var(--ai-deep))}
 .note h4{font-family:'Noto Serif KR',serif;font-size:16px;margin-bottom:10px;color:var(--washi)}
 .note h4 .jp{color:var(--kin);letter-spacing:.2em;font-size:13px;margin-left:8px}
-.note b{color:var(--kin)}
-.note p{margin-bottom:7px}
+.note b{color:var(--kin)} .note p{margin-bottom:7px}
 .note .law{color:rgba(245,239,225,.66);font-size:12.5px;margin-top:12px;border-top:1px solid rgba(245,239,225,.18);padding-top:12px}
-@media(max-width:560px){#emap{height:42vh;min-height:290px}.cards{grid-template-columns:1fr}.tab .lantern{min-width:88px;font-size:12px}}
+@media(max-width:560px){#emap{height:42vh;min-height:280px}.cards{grid-template-columns:1fr}.tab .lantern{min-width:86px;font-size:12px}.daytab{padding:10px 13px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
-</head>
+</style></head>
 <body>
-<header>
-  <div class="head-inner">
-    <div class="hanko jp">本日も<br>営業中</div>
-    <div class="eyebrow">TOKYO · 7/22 水 — 7/25 土</div>
-    <h1>도쿄 미식첩 <span class="jp">東京美食帖</span></h1>
-    <div class="subline"><b>정휘 부부 御一行様</b> — 3박 4일 · 위장 2개 · 동네 9곳 · 음식 장르별</div>
-    <div class="head-meta">
-      <span class="chip">☀️ 낮 <b>31–34°</b> · 밤에도 25°</span>
-      <span class="chip">💧 습도 <b>80%</b> — 앞머리는 도착 즉시 전사</span>
-      <span class="chip">🍺 수분 보충은 맥주로 <b>(의학적 근거 없음)</b></span>
-    </div>
-    <div class="omikuji">
-      <button id="omikuji-btn">🎋 오늘의 오미쿠지 뽑기</button>
-      <span class="result" id="omikuji-out">운세를 뽑으면 오늘의 여행운이 나옵니다</span>
-    </div>
-    <div class="hotel">
-      <span class="pin">🏨</span><b>베이스캠프</b> 미츠이 가든 호텔 긴자 프리미어 <span class="jp">三井ガーデンホテル銀座プレミア</span>
-      <span style="color:rgba(245,239,225,.7)">— 모든 이동동선이 여기 기준</span>
-      <a href="https://www.google.com/maps/search/?api=1&query=三井ガーデンホテル銀座プレミア" target="_blank" rel="noopener">구글지도 ↗</a>
-    </div>
-    <div class="nav-rope"><nav id="tabs" aria-label="지역 선택"></nav></div>
+<header><div class="head-inner">
+  <div class="hanko jp">本日も<br>営業中</div>
+  <div class="eyebrow">TOKYO · 7/22 水 — 7/25 土</div>
+  <h1>도쿄 미식첩 <span class="jp">東京美食帖</span></h1>
+  <div class="subline"><b>정휘 부부 御一行様</b> — 일차별 동선 + 지역별 장르 가이드</div>
+  <div class="head-meta">
+    <span class="chip">☀️ 낮 <b>31–34°</b> · 밤에도 25°</span>
+    <span class="chip">💧 습도 <b>80%</b></span>
+    <span class="chip">🍺 수분 보충은 맥주로 <b>(의학적 근거 없음)</b></span>
   </div>
-</header>
-
-<div id="map-wrap">
-  <div class="map-frame" id="map-frame">
-    <div class="zoom-btns" id="zoom-btns"><button id="zin" aria-label="확대">＋</button><button id="zout" aria-label="축소">－</button></div>
-    <div class="legend-fixed" id="legend"></div>
-    <div id="netbadge">🖼 그림지도 (오프라인)</div>
-    <svg id="emap" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-label="도쿄 그림지도"></svg>
-    <div id="lmap"></div>
-  </div>
-  <div class="map-caption">
-    <span>인터넷 연결 시 실제 지도로 자동 전환 · ★는 숙소 · 핀 색=음식 장르 · 일본어명 탭하면 복사</span>
-    <span class="jp">江戸切絵図風</span>
-  </div>
-  <div id="infobar"><span class="ph">지도의 핀이나 아래 카드를 누르면 여기에 정보가 표시됩니다 · 실제 길찾기는 [구글지도] 버튼으로</span></div>
+  <div class="omikuji"><button id="omikuji-btn">🎋 오늘의 오미쿠지 뽑기</button><span class="result" id="omikuji-out">운세를 뽑으면 오늘의 여행운이 나옵니다</span></div>
+  <div class="hotel"><span>🏨</span><b>베이스캠프</b> 미츠이 가든 호텔 긴자 프리미어 <span class="jp">三井ガーデンホテル銀座プレミア</span><a href="https://www.google.com/maps/search/?api=1&query=三井ガーデンホテル銀座プレミア" target="_blank" rel="noopener">구글지도 ↗</a></div>
+  <div class="daynav" id="daynav"></div>
+</div></header>
+<div id="dayroute"><div class="droute-in" id="droute-in"></div></div>
+<div class="nav-rope"><div style="max-width:1080px;margin:0 auto"><nav id="tabs" aria-label="지역 선택"></nav></div></div>
+<div id="map-wrap"><div class="map-frame" id="map-frame">
+  <div class="zoom-btns" id="zoom-btns"><button id="zin" aria-label="확대">＋</button><button id="zout" aria-label="축소">－</button></div>
+  <div class="legend-fixed" id="legend"></div>
+  <div id="netbadge">🖼 그림지도 (오프라인)</div>
+  <svg id="emap" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" aria-label="도쿄 그림지도"></svg>
+  <div id="lmap"></div>
 </div>
-
+<div class="map-caption"><span>상위탭=일차 / 하위탭=지역 · ★는 숙소 · 핀 색=음식·쇼핑 장르 · 일본어명 탭하면 복사</span><span class="jp">江戸切絵図風</span></div>
+<div id="infobar"><span class="ph">일차를 고르면 그 날 동선과 지역이 뜹니다 · 핀/카드를 누르면 정보 표시 · 길찾기는 [구글지도]</span></div>
+</div>
 <main id="panels"></main>
 <div id="toast">복사 완료 ✓</div>
-
 <script>
-/* ───── 음식 장르 정의 (색 + 아이콘 + 일본어) ───── */
-const GENRES = {
-  sushi:   {label:"스시",      jp:"鮨",       color:"#34548f", icon:"🍣"},
-  ramen:   {label:"라멘",      jp:"ラーメン", color:"#c0504d", icon:"🍜"},
-  udon:    {label:"우동·소바", jp:"うどん",   color:"#5a8f7b", icon:"🥢"},
-  curry:   {label:"카레",      jp:"カレー",   color:"#c9882e", icon:"🍛"},
-  yakitori:{label:"야끼토리",  jp:"焼き鳥",   color:"#a0552e", icon:"🍢"},
-  robata:  {label:"로바다야끼",jp:"炉端焼き", color:"#9e6b3a", icon:"🔥"},
-  izakaya: {label:"이자카야",  jp:"居酒屋",   color:"#7a5fa0", icon:"🏮"},
-  street:  {label:"길거리간식",jp:"食べ歩き", color:"#cf6f4a", icon:"🍡"},
-  cafe:    {label:"카페",      jp:"カフェ",   color:"#8a6d4a", icon:"☕"},
-  bar:     {label:"바",        jp:"バー",     color:"#3a3550", icon:"🥃"},
-  hamburg: {label:"함바그",    jp:"ハンバーグ",color:"#b5683a", icon:"🍳"},
-  tempura: {label:"텐푸라·튀김",jp:"天ぷら",   color:"#c99a3a", icon:"🍤"},
-  bonus:   {label:"지역보너스",jp:"名物",     color:"#2e9e92", icon:"⭐"}
-};
-const TH={
-sushi:'<ellipse cx="18" cy="22" rx="11" ry="6"/><path d="M7 18c2-4 8-7 11-7s9 3 11 7c-2 3-6 4-11 4s-9-1-11-4z" fill="#f5d8c6" stroke="#c73e2d"/>',
-omakase:'<ellipse cx="18" cy="23" rx="12" ry="5"/><path d="M8 19c2-5 7-8 10-8s8 3 10 8" fill="#f0c9c0" stroke="#c73e2d"/><path d="M18 11l2-4 2 4" stroke="#c9a227"/>',
-ramen:'<path d="M5 16h26c0 7-5 12-13 12S5 23 5 16z"/><path d="M9 16c1-6 3-9 3-9M15 16c1-6 3-9 3-9M21 16c1-6 3-9 3-9" stroke="#c73e2d"/><path d="M24 4l8 6M26 2l8 6"/>',
-udon:'<path d="M5 16h26c0 7-5 12-13 12S5 23 5 16z"/><path d="M11 16q3-6 7-6t7 6" stroke="#c9a227"/>',
-curry:'<path d="M5 18h26c0 6-6 10-13 10S5 24 5 18z"/><path d="M12 18c0-3 3-5 6-5s6 2 6 5" fill="#c9882e" stroke="#a06a1a"/><path d="M22 8v8" stroke="#8a5a2e"/><path d="M20 8h4" stroke="#8a5a2e"/>',
-yakitori:'<path d="M18 4v28"/><circle cx="18" cy="10" r="4" fill="#f0c9c0"/><circle cx="18" cy="18" r="4" fill="#fff"/><circle cx="18" cy="26" r="4" fill="#dfe8d2"/>',
-robata:'<path d="M8 28c0-6 4-9 4-14M18 28c0-6 4-9 4-14M28 28c-4 0-8-2-8-6" stroke="#c73e2d"/><path d="M5 30h26"/><path d="M10 14q8-6 16 0" stroke="#c9a227"/>',
-izakaya:'<path d="M12 9h12M14 9c-4 4-4 14 0 18M22 9c4 4 4 14 0 18M14 27h8"/><path d="M11 14h14M11 22h14" stroke="#c73e2d"/><path d="M18 5v4M18 27v4"/>',
-street:'<path d="M18 4v28"/><circle cx="18" cy="9" r="3.5" fill="#f0c9c0"/><circle cx="18" cy="16" r="3.5" fill="#dfe8d2"/><circle cx="18" cy="23" r="3.5" fill="#f5d8a0"/>',
-cafe:'<path d="M7 13h18v9a8 8 0 0 1-16 0z"/><path d="M25 15h4a3 3 0 0 1 0 7h-4"/><path d="M12 9c0-2 2-2 2-4M18 9c0-2 2-2 2-4"/>',
-bar:'<path d="M8 8h20l-10 12z"/><path d="M18 20v9M12 29h12"/><circle cx="22" cy="11" r="1.5" fill="#c73e2d" stroke="none"/>',
-hamburg:'<ellipse cx="18" cy="24" rx="13" ry="5"/><path d="M9 20a9 7 0 0 1 18 0c0 2-4 4-9 4s-9-2-9-4z" fill="#d9b08c" stroke="#8a5a2e"/><path d="M12 13c2-2 10-2 12 0" stroke="#c73e2d"/>',
-beer:'<rect x="8" y="10" width="16" height="20" rx="2"/><path d="M24 14h5a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5"/><path d="M8 10c0-4 16-4 16 0" fill="#fff"/><path d="M12 15v10M18 15v10" stroke="#c9a227"/>',
-bread:'<path d="M6 20a6 6 0 0 1 6-9c1-3 9-3 10 0a6 6 0 0 1 6 9v6H6z"/><path d="M12 18l3 4M18 16l3 4M24 18l-2 4" stroke="#c9a227"/>',
-parfait:'<path d="M10 8h16l-3 16a5 5 0 0 1-10 0z"/><path d="M16 24v6M12 30h8"/><circle cx="18" cy="8" r="3" fill="#f0c9c0" stroke="#c73e2d"/>',
-gelato:'<path d="M12 16h12l-6 16z"/><circle cx="14" cy="11" r="5"/><circle cx="22" cy="11" r="5" fill="#dfe8d2"/>',
-donut:'<circle cx="18" cy="18" r="11"/><circle cx="18" cy="18" r="4"/><path d="M10 12c2 2 4-1 6 1M22 9c1 2 4 1 5 3" stroke="#c73e2d"/>',
-monja:'<path d="M5 18h26c0 6-6 10-13 10S5 24 5 18z"/><path d="M11 18c0-3 14-3 14 0" stroke="#c9a227"/><circle cx="14" cy="22" r="1.5" fill="#c73e2d" stroke="none"/><circle cx="20" cy="23" r="1.5" fill="#c73e2d" stroke="none"/>',
-tempura:'<path d="M10 24c-3-7 2-15 9-16 2 4 1 7-1 9 3-1 6 0 8 3-3 5-11 8-16 4z"/><path d="M8 28h22" stroke="#c73e2d"/>',
-bowl:'<path d="M5 17h26c0 7-5 12-13 12S5 24 5 17z"/><ellipse cx="18" cy="15" rx="6" ry="3" fill="#f5d8a0" stroke="#c9a227"/>',
-fish:'<path d="M5 18c5-6 12-8 18-5l7-5-2 8 2 8-7-5c-6 3-13 1-18-5z"/><circle cx="22" cy="16" r="1.4" fill="#2b2722" stroke="none"/>',
-shirt:'<path d="M13 6l5 4 5-4 7 5-4 5-3-2v14H13V14l-3 2-4-5z"/>',
-torii:'<path d="M5 10c8-3 18-3 26 0M7 9v22M29 9v22M9 16h18M18 16v15"/>',
-view:'<path d="M18 4l7 24H11z"/><path d="M13 18h10M11 24h14M6 31h24"/>',
-art:'<circle cx="18" cy="18" r="4"/><circle cx="18" cy="18" r="9" stroke-dasharray="3 4"/><circle cx="18" cy="18" r="14" stroke-dasharray="2 6"/>',
-cart:'<circle cx="13" cy="29" r="2.5"/><circle cx="25" cy="29" r="2.5"/><path d="M4 6h4l3 16h16l3-11H9"/>',
-wave:'<path d="M4 22a7 7 0 0 1 14 0 7 7 0 0 1 14 0M4 28a7 7 0 0 1 14 0 7 7 0 0 1 14 0" stroke="#5e8d88"/>',
-pizza:'<path d="M6 8l24 6-18 18z"/><circle cx="14" cy="16" r="2" fill="#c73e2d" stroke="none"/><circle cx="18" cy="23" r="2" fill="#c73e2d" stroke="none"/>',
-book:'<path d="M18 8c-3-2-8-2-12 0v20c4-2 9-2 12 0 3-2 8-2 12 0V8c-4-2-9-2-12 0z"/><path d="M18 8v20"/>',
-record:'<circle cx="18" cy="18" r="13"/><circle cx="18" cy="18" r="3" fill="#c73e2d" stroke="none"/><circle cx="18" cy="18" r="8" stroke-dasharray="1 3"/>',
-bag:'<path d="M9 12h18l-2 18H11z"/><path d="M13 12a5 5 0 0 1 10 0"/>',
-onigiri:'<path d="M18 6c4 0 12 11 12 17 0 4-5 6-12 6S6 27 6 23C6 17 14 6 18 6z"/><rect x="14" y="20" width="8" height="8" fill="#4a4536" stroke="none" rx="1"/>',
-skewer:'<path d="M18 4v28"/><circle cx="18" cy="10" r="4" fill="#f0c9c0"/><circle cx="18" cy="18" r="4" fill="#fff"/><circle cx="18" cy="26" r="4" fill="#dfe8d2"/>',
-coffee:'<path d="M7 13h18v9a8 8 0 0 1-16 0z"/><path d="M25 15h4a3 3 0 0 1 0 7h-4"/><path d="M12 9c0-2 2-2 2-4M18 9c0-2 2-2 2-4"/>'
-};
+const DAYS=[{"id": "d1", "label": "1일차", "date": "7/22 水", "sub": "도착 · 어른 동네", "color": "#d98e2b", "route": "나리타 10:50 도착 → N'EX로 긴자 체크인(14시) → 히비야선으로 에비스권. 도착 오후 반나절, 차분한 동네로 워밍업.", "regions": ["ebisu"]}, {"id": "d2", "label": "2일차", "date": "7/23 木", "sub": "새벽 스시 · 빈티지", "color": "#3d7fb0", "route": "토요스 새벽 스시(7~8시 줄서기) → 팀랩 플래닛(8~12시 입장권) → 오후 시모키타자와 빈티지. 동→서 이동 한 번.", "regions": ["toyosu", "shimokita"]}, {"id": "d3", "label": "3일차", "date": "7/24 金", "sub": "전통 · 트렌드 · 밤", "color": "#cf4a37", "route": "아사쿠사 오픈런(7~8시 센소지) → 긴자선 직통으로 시부야·오모테산도(점심·쇼핑) → 신주쿠(저녁·술). 긴자선 한 줄이 핵심.", "regions": ["asakusa", "shibuya", "shinjuku"]}, {"id": "d4", "label": "4일차", "date": "7/25 土", "sub": "출국 · 숙소권", "color": "#b08d57", "route": "와이프 새 숙소(긴자권)에 짐 보관 → 도쿄역·긴자·신바시 도보 산책 → 정휘는 N'EX로 나리타(19:45 출발). 짐 걱정 없는 가벼운 마지막날.", "regions": ["ginza"]}, {"id": "plus", "label": "+α", "date": "상시", "sub": "마트 · 야식", "color": "#5a8f6a", "route": "특정 일차에 매이지 않는 상시 참고. 밤마다 숙소 근처에서 주류·야식 쟁이기.", "regions": ["shopping"]}];
+const GENRES={"sushi": {"label": "스시", "jp": "鮨", "color": "#34548f", "icon": "🍣"}, "ramen": {"label": "라멘", "jp": "ラーメン", "color": "#c0504d", "icon": "🍜"}, "udon": {"label": "우동·소바", "jp": "うどん", "color": "#5a8f7b", "icon": "🥢"}, "curry": {"label": "카레", "jp": "カレー", "color": "#c9882e", "icon": "🍛"}, "yakitori": {"label": "야끼토리", "jp": "焼き鳥", "color": "#a0552e", "icon": "🍢"}, "robata": {"label": "로바다야끼", "jp": "炉端焼き", "color": "#9e6b3a", "icon": "🔥"}, "izakaya": {"label": "이자카야", "jp": "居酒屋", "color": "#7a5fa0", "icon": "🏮"}, "tempura": {"label": "텐푸라·튀김", "jp": "天ぷら", "color": "#c99a3a", "icon": "🍤"}, "street": {"label": "길거리간식", "jp": "食べ歩き", "color": "#cf6f4a", "icon": "🍡"}, "cafe": {"label": "카페", "jp": "カフェ", "color": "#8a6d4a", "icon": "☕"}, "bar": {"label": "바", "jp": "バー", "color": "#3a3550", "icon": "🥃"}, "hamburg": {"label": "함바그", "jp": "ハンバーグ", "color": "#b5683a", "icon": "🍳"}, "select": {"label": "편집숍", "jp": "セレクトショップ", "color": "#2e7d9e", "icon": "🛍"}, "vintage": {"label": "빈티지", "jp": "古着", "color": "#9c6f3a", "icon": "👕"}, "bonus": {"label": "지역보너스", "jp": "名物", "color": "#2e9e92", "icon": "⭐"}};
+const REGIONS=[{"id": "ebisu", "hex": "#d98e2b", "kanji": "恵比寿", "tab": "에비스·나카메·다이칸", "tabSub": "양조장 · 어른", "title": "에비스 · 나카메구로 · 다이칸야마", "sub": "EBISU / NAKAMEGURO / DAIKANYAMA", "intro": "맥주가 동네 이름이 된 에비스, 강변 카페의 나카메구로, 세련된 다이칸야마가 한 줄로 이어지는 어른 권역. 도착일 오후에 차분하게 워밍업하기 딱.", "joke": "※ 남편 실종 신고 전, 양조장부터 수색할 것. 발견 확률 약 90%.", "route": {"from": "숙소에서", "line": "히비야선 직통", "detail": "긴자→에비스, 환승 0회 · 나카메·다이칸은 한 정거장", "time": "🚇 약 20분"}, "bonus": "Yebisu Brewery Tokyo — 입장 무료 양조장+박물관, 한정 에비스 탭 시음. 화요일 휴무.", "bonusJp": "YEBISU BREWERY TOKYO", "items": [{"g": "ramen", "n": "AFURI 에비스 본점", "jp": "AFURI 恵比寿", "sub": "유자소금라멘", "th": "ramen", "d": "유자 향의 담려계 라멘 — 폭염엔 돈코츠보다 이게 정답.", "b": ["必食", "여름의 정답"], "seal": true, "lat": 35.6483, "lng": 139.71088}, {"g": "hamburg", "n": "세이린칸", "jp": "聖林館", "sub": "나폴리피자 (나카메구로)", "th": "pizza", "d": "마르게리타·마리나라 단 두 장으로 승부하는 피자 성지. 나카메구로 필수 한 끼.", "b": ["메뉴 2개", "성지"], "lat": 35.645, "lng": 139.6979}, {"g": "yakitori", "n": "야키톤 타츠야", "jp": "やきとん たつや 恵比寿", "sub": "돼지꼬치 · 1950s", "th": "yakitori", "d": "에비스 명물 야키톤, 한 꼬치 100엔대. 서서 마시는 쇼와의 맛.", "b": ["노포", "초저가"], "lat": 35.6469, "lng": 139.7103}, {"g": "izakaya", "n": "에비스요코초", "jp": "恵比寿横丁", "sub": "레트로 이자카야", "th": "izakaya", "d": "옛 시장 건물 안 포장마차 골목. 17시 오픈.", "b": ["17:00~"], "lat": 35.64822, "lng": 139.71064}, {"g": "cafe", "n": "아임도넛? 나카메구로", "jp": "I'm donut ? 中目黒", "sub": "생도넛 본점", "th": "donut", "d": "생도넛 신드롬의 발상지. 9시 오픈 직후가 줄 최단.", "b": ["9:00~", "본점"], "lat": 35.6441, "lng": 139.6991}, {"g": "cafe", "n": "오니버스커피", "jp": "オニバスコーヒー 中目黒店", "sub": "스페셜티 커피", "th": "coffee", "d": "철길 옆 2층에서 전철 보며 한 잔. 도쿄 스페셜티 대표.", "b": ["9:00~"], "lat": 35.6452, "lng": 139.6985}, {"g": "select", "n": "KAPITAL 에비스점", "jp": "KAPITAL 恵比寿店", "sub": "캐피탈 · 도쿄 1호점", "th": "shirt", "d": "한국엔 정식 매장 없는 컬트 데님 브랜드. 워크·밀리터리 베이스의 본점, 세계관이 가게 인테리어에 그대로. 외국 패션피플 성지.", "b": ["必食", "컬트", "도쿄 1호점"], "seal": true, "lat": 35.647, "lng": 139.709}, {"g": "vintage", "n": "다이칸야마 빈티지 거리", "jp": "代官山 古着", "sub": "빈티지 · 셀렉트", "th": "shirt", "d": "다이칸야마~나카메 일대의 고급 빈티지·셀렉트숍. 시모키타보다 가격대 있지만 큐레이션 좋은 어른 빈티지.", "b": ["어른 빈티지"], "lat": 35.6504, "lng": 139.6993}, {"g": "bonus", "n": "다이칸야마 츠타야 서점", "jp": "代官山 蔦屋書店", "sub": "서점 · 명소", "th": "book", "d": "'세계에서 가장 아름다운 서점' 단골. 라운지에서 책+커피 — 에비스권 마무리.", "b": ["명소"], "lat": 35.649, "lng": 139.6962}]}, {"id": "toyosu", "hex": "#3d7fb0", "kanji": "豊洲", "tab": "토요스", "tabSub": "새벽 스시 · 팀랩", "title": "토요스", "sub": "TOYOSU — 새벽 스시와 디지털 피서", "intro": "옛 츠키지 장내시장이 이전한 거대 현대식 시장. '제대로 된 한 끼' 새벽 오마카세가 본진. 옆엔 teamLab Planets — 한낮 폭염의 피난처.", "joke": "※ 새벽 스시는 첫차 타고 줄 서는 게 국룰. 잠 vs 인생 스시, 둘 중 하나를 고르시오.", "route": {"from": "숙소에서", "line": "택시 / 유라쿠초선+유리카모메", "detail": "새벽이면 택시가 정답", "time": "🚕 15분 / 🚇 25분"}, "bonus": "teamLab Planets TOKYO — 맨발로 물속 걷는 몰입 전시. 8~12시 입장권 예약 완료. 7월 말엔 관광이 아니라 피서.", "bonusJp": "チームラボプラネッツ TOKYO DMM", "items": [{"g": "sushi", "n": "스시다이", "jp": "寿司大", "sub": "오마카세 조식 · 끝판왕", "th": "omakase", "d": "구 츠키지 장내의 전설. 새벽 웨이팅의 가치가 있는 오마카세 조식 — 토요스 스시의 상징.", "b": ["必食", "새벽 권장", "끝판왕"], "seal": true, "lat": 35.6452, "lng": 139.7858}, {"g": "sushi", "n": "다이와스시", "jp": "大和寿司", "sub": "오마카세 · 양대산맥", "th": "omakase", "d": "스시다이와 양대산맥. 줄이 상대적으로 빠른 편 — 팀랩 입장 시간 압박 있으면 이쪽.", "b": ["양대산맥", "비교적 빠름"], "lat": 35.6453, "lng": 139.786}, {"g": "bonus", "n": "센캬쿠반라이", "jp": "豊洲 千客万来", "sub": "해산물덮밥 · 2024 신규", "th": "bowl", "d": "2024 오픈 에도풍 식도락 시설. 우니·이쿠라·참치 덮밥 골라먹기 + 옥상 족욕탕. 스시 줄 부담되면 여기.", "b": ["2024 신규", "옥상 족욕"], "lat": 35.6447, "lng": 139.7872}, {"g": "bonus", "n": "토요스 시장 견학데크", "jp": "豊洲市場 見学デッキ", "sub": "참치 경매 견학", "th": "fish", "d": "참치 경매를 유리 너머로. '장내' 스케일.", "b": ["견학 무료"], "lat": 35.6455, "lng": 139.7865}]}, {"id": "shimokita", "hex": "#7b8b3a", "kanji": "下北沢", "tab": "시모키타자와", "tabSub": "빈티지 · 카레", "title": "시모키타자와", "sub": "SHIMOKITAZAWA — 빈티지의 성지", "intro": "'시모키타'로 불리는 빈티지 패션 본진. 골목마다 구제숍이 빽빽하고, 음악·연극·카레가 뒤섞인 자유로운 동네. 와이프 빈티지 쇼핑 메인 무대.", "joke": "※ 한 집만 보고 나오는 건 불가능한 동네. 시작하면 골목이 골목을 부름.", "route": {"from": "토요스/숙소에서", "line": "게이오이노카시라선", "detail": "시부야 경유 환승 → 시모키타자와역", "time": "🚇 약 35–40분"}, "bonus": "구제숍 거리 — 플라밍고·NOTIME·BETTER 등 골목 전체가 빈티지. 트렌디·셀렉트 계열의 빈티지 성지.", "bonusJp": "下北沢 古着屋街", "items": [{"g": "vintage", "n": "플라밍고 시모키타", "jp": "フラミンゴ 下北沢", "sub": "구제 · 대표격", "th": "shirt", "d": "시모키타 대표 구제 체인. 미·유럽 매입 중심, 메·여 물량 풍부 — 입문부터 빈티지까지.", "b": ["必食", "대표격"], "seal": true, "lat": 35.6616, "lng": 139.6675}, {"g": "vintage", "n": "BETTER 시모키타", "jp": "BETTER 下北沢", "sub": "구제 · 프로 셀렉트", "th": "shirt", "d": "90s 스트리트~50·60s 빈티지에 랄프로렌 라인이 강한 셀렉트숍 — 옷 좀 아는 사람들이 가는 집.", "b": ["프로 추천"], "lat": 35.6602, "lng": 139.6672}, {"g": "vintage", "n": "NOTIME 시모키타", "jp": "NOTIME 下北沢店", "sub": "구제 · 합리적 가격", "th": "shirt", "d": "유인×무인 하이브리드. 굿레귤러를 합리적 가격에 — 아메카지·밴드T까지.", "b": ["가성비"], "lat": 35.6612, "lng": 139.6678}, {"g": "curry", "n": "큐야무테이", "jp": "下北沢 旧ヤム邸", "sub": "스파이스 카레", "th": "curry", "d": "카레의 거리 시모키타 대표 스파이스 카레. 여러 카레를 한 접시에 섞는 '아이가케'가 명물.", "b": ["必食", "거리 명물"], "seal": true, "lat": 35.662, "lng": 139.6672}, {"g": "cafe", "n": "보너스 트랙", "jp": "BONUS TRACK", "sub": "복합공간 · 카페", "th": "book", "d": "옛 선로 부지 복합공간. 개성 점포·카페·책방 — 쇼핑 중 피서.", "b": ["피서 겸용"], "lat": 35.6595, "lng": 139.6655}, {"g": "bar", "n": "시모키타 레코드바", "jp": "レコード店街", "sub": "음악 바 · LP", "th": "record", "d": "음악의 거리다운 중고 LP숍·레코드바. 동네 색이 진함.", "b": ["음악"], "lat": 35.6618, "lng": 139.6668}]}, {"id": "asakusa", "hex": "#cf4a37", "kanji": "浅草", "tab": "아사쿠사", "tabSub": "전통 관광", "title": "아사쿠사", "sub": "ASAKUSA — 1400년의 도쿄", "intro": "센소지를 중심으로 한 전통 1번지. 향 연기, 나카미세 먹거리, 인력거가 공존. 8시 전 오픈런이 정답 — 9시 넘으면 인류 전체가 옴.", "joke": "※ 센소지는 8시 전엔 참배객이, 9시 후엔 인류 전체가 옴. 둘 중 하나를 고르시오.", "route": {"from": "숙소에서", "line": "긴자선 직통", "detail": "긴자→아사쿠사, 환승 0회 · 7~8시 도착 권장", "time": "🚇 약 20분"}, "bonus": "센소지 + 나카미세 거리 — 628년 창건, 도쿄 최고(最古) 사찰. 8시 전 도착이 절대 원칙.", "bonusJp": "浅草寺", "items": [{"g": "tempura", "n": "다이코쿠야 텐푸라", "jp": "大黒家天麩羅", "sub": "에도식 텐동 · 1887", "th": "tempura", "d": "새카만 비법 타레에 통째로 적신 에도마에 텐동의 원형. 줄은 보이는 것보다 김.", "b": ["1887년", "행렬"], "lat": 35.7129, "lng": 139.795}, {"g": "hamburg", "n": "요시카미", "jp": "洋食ヨシカミ", "sub": "경양식", "th": "hamburg", "d": "'너무 맛있어서 죄송합니다'가 공식 간판 문구. 하야시라이스·오므라이스·함바그.", "b": ["쇼와 감성"], "lat": 35.7132, "lng": 139.7942}, {"g": "street", "n": "카게츠도 멜론빵", "jp": "浅草花月堂 本店", "sub": "멜론빵", "th": "bread", "d": "9시 오픈 직후 갓 구운 잠보 멜론빵 — 겉바속촉의 천장. 현금만.", "b": ["必食", "9:00~", "현금만"], "seal": true, "lat": 35.71463, "lng": 139.79517}, {"g": "street", "n": "스즈키엔 말차 젤라토", "jp": "壽々喜園 浅草本店", "sub": "젤라토", "th": "gelato", "d": "'세계에서 가장 진한 말차' No.7. 농도 1~7단계 — 7은 말차의 멱살을 잡는 수준.", "b": ["No.7 도전"], "lat": 35.7174, "lng": 139.7975}, {"g": "izakaya", "n": "호피도리", "jp": "ホッピー通り", "sub": "니코미 골목 · 낮술", "th": "izakaya", "d": "소힘줄 조림+호피의 노천 골목. 해 지기 전부터 마시는 게 이 골목의 문법.", "b": ["노천", "낮술 공인"], "lat": 35.7146, "lng": 139.7918}]}, {"id": "shibuya", "hex": "#2e9e92", "kanji": "渋谷", "tab": "시부야·오모테산도", "tabSub": "트렌드 · 쇼핑", "title": "시부야 · 오모테산도", "sub": "SHIBUYA / OMOTESANDO — 낮의 트렌드", "intro": "스크램블 교차로의 시부야부터 가로수길 오모테산도까지. 낮 파트(점심·쇼핑·카페) 담당 — 밤은 신주쿠로 넘긴다. 편집숍 플래그십이 모인 패션 1번지.", "joke": "※ 여기서 길 잃는 건 정상. 부부가 흩어지면 하치코 동상 앞 집결.", "route": {"from": "아사쿠사에서", "line": "긴자선 직통", "detail": "아사쿠사→시부야/오모테산도, 환승 0회", "time": "🚇 약 30분"}, "bonus": "BEAMS JAPAN 시부야(도큐플라자) + 오모테산도 편집숍 거리 — 한국에 없는 일본 셀렉트의 본진.", "bonusJp": "BEAMS JAPAN SHIBUYA", "items": [{"g": "hamburg", "n": "히키니쿠토코메 시부야", "jp": "挽肉と米 渋谷", "sub": "숯불 함바그 · 백명점", "th": "hamburg", "d": "'갓 갈고 갓 굽고 갓 지은' 함바그 3개+솥밥 단일 메뉴. 洋食 백명점 3.72 — 정리권 발권.", "b": ["必食", "백명점", "정리권"], "seal": true, "lat": 35.658, "lng": 139.6957}, {"g": "udon", "n": "우동 야마쵸", "jp": "うどん 山長", "sub": "사누키 우동 · 빕구르망", "th": "udon", "d": "시부야역 3분, 3년 연속 빕구르망+백명점. 홀짝수일에 면 굵기가 바뀜.", "b": ["빕구르망", "백명점"], "lat": 35.6588, "lng": 139.6985}, {"g": "select", "n": "BEAMS JAPAN 시부야", "jp": "BEAMS JAPAN SHIBUYA", "sub": "빔즈 · 도큐플라자", "th": "bag", "d": "한국 미진출 일본 셀렉트의 대표 BEAMS. 시부야 도큐플라자점은 일본 디자인 큐레이션 — 선물·기념품도 좋음.", "b": ["必食", "빔즈", "일본 한정"], "seal": true, "lat": 35.6595, "lng": 139.6985}, {"g": "select", "n": "오모테산도 편집숍 거리", "jp": "表参道 セレクトショップ", "sub": "편집숍 · 가로수길", "th": "bag", "d": "유나이티드애로우즈·저널스탠다드 등 일본 셀렉트 플래그십 밀집. 한국에 없는 브랜드 라인업.", "b": ["플래그십"], "lat": 35.6668, "lng": 139.7088}, {"g": "cafe", "n": "아임도넛? 오모테산도", "jp": "I'm donut ? 表参道", "sub": "생도넛", "th": "donut", "d": "생도넛 신드롬. 오모테산도 산책과 세트.", "b": ["행렬"], "lat": 35.6668, "lng": 139.709}, {"g": "cafe", "n": "빵토에스프레소토", "jp": "パンとエスプレッソと", "sub": "오모테산도 · 베이커리", "th": "bread", "d": "오모테산도 골목, 8시 오픈. 식빵 '무' 프렌치토스트가 시그니처.", "b": ["8:00~"], "lat": 35.6699, "lng": 139.7079}, {"g": "bonus", "n": "시부야 스카이", "jp": "SHIBUYA SKY", "sub": "전망대 · 명소", "th": "view", "d": "229m 옥상 전망, 도쿄 최고 뷰. 일몰 슬롯은 예약 전쟁.", "b": ["명소", "예약"], "lat": 35.6585, "lng": 139.7022}]}, {"id": "shinjuku", "hex": "#8a5fb8", "kanji": "新宿", "tab": "신주쿠", "tabSub": "밤 · 술 · 라멘", "title": "신주쿠", "sub": "SHINJUKU — 밤과 술의 동네", "intro": "라멘 백명점 9곳·이자카야·바가 밀집한 격전지. 시부야가 낮을 맡으면 신주쿠는 밤을 맡는다. 3일차 저녁·술자리 전용.", "joke": "※ 골든가이의 '한 집만'이 다섯 집이 되는 구조적 결함. 의지로 해결 불가.", "route": {"from": "시부야에서", "line": "JR/긴자선", "detail": "시부야→신주쿠, 두 정거장", "time": "🚇 약 7분"}, "bonus": "오모이데요코초 + 골든가이 — 쇼와시대 야키토리 골목과 초소형 바 200개 미로. 밤의 신주쿠 그 자체.", "bonusJp": "思い出横丁・新宿ゴールデン街", "items": [{"g": "ramen", "n": "후운지", "jp": "風雲児", "sub": "츠케멘 · 3.7+", "th": "ramen", "d": "닭+어패류 더블스프 츠케멘의 교과서. 오픈 직전 줄서기가 웨이팅 최소화 공식.", "b": ["必食", "3.7+", "웨이팅"], "seal": true, "lat": 35.68683, "lng": 139.69664}, {"g": "ramen", "n": "토시오카", "jp": "自家製中華そば としおか", "sub": "중화소바 · 백명점", "th": "ramen", "d": "라멘 백명점 2025. 자가제면 정통 중화소바 — 격전지의 실력파.", "b": ["백명점 2025"], "lat": 35.6938, "lng": 139.7045}, {"g": "yakitori", "n": "오모이데요코초 야키토리", "jp": "思い出横丁", "sub": "야키토리 · 생맥", "th": "yakitori", "d": "쇼와시대 골목, 자리 있는 집 아무 데나가 정답. 꼬치+생맥 1차.", "b": ["분위기", "현금"], "lat": 35.6927, "lng": 139.69958}, {"g": "izakaya", "n": "신주쿠 카부토", "jp": "新宿カブト", "sub": "장어꼬치 노포", "th": "izakaya", "d": "오모이데요코초의 전설적 장어꼬치(우나기) 노포. 좁고 진한 카운터 — 마니아 코스.", "b": ["노포", "마니아"], "lat": 35.6928, "lng": 139.6996}, {"g": "bar", "n": "골든가이 바호핑", "jp": "新宿ゴールデン街", "sub": "바 · 위스키", "th": "bar", "d": "한 집에 한두 잔씩 옮겨 다니는 좁고 진한 도쿄의 밤. 커버차지 입구 확인.", "b": ["2차", "심야"], "lat": 35.69411, "lng": 139.70476}, {"g": "select", "n": "BEAMS JAPAN 신주쿠", "jp": "BEAMS JAPAN 新宿", "sub": "빔즈 본점 · B1~5F", "th": "bag", "d": "BEAMS JAPAN 본점, 지하1~5층 통째. '식·명품·패션·크래프트' 층별 일본 큐레이션. Porter Classic도 여기 입점 — 낮에 미리 들르면 좋음.", "b": ["必食", "빔즈 본점", "포터 클래식"], "seal": true, "lat": 35.6905, "lng": 139.704}]}, {"id": "ginza", "hex": "#b08d57", "kanji": "銀座", "tab": "도쿄역·긴자·신바시", "tabSub": "숙소권 · 미식", "title": "도쿄역 · 긴자 · 신바시", "sub": "TOKYO STN / GINZA / SHIMBASHI", "intro": "출국일 홈그라운드. 와이프 새 숙소(긴자권)에 짐 맡기고 가볍게 도는 동네. 일본 최고(最古) 비어홀, 스시, 도쿄역 건축까지 도보권.", "joke": "※ 마지막날 '하나만 더'가 비행기를 놓치게 함. 시계를 보며 즐길 것.", "route": {"from": "긴자 숙소에서", "line": "전부 도보권", "detail": "긴자 일대 도보 5분 · 도쿄역/신바시 한 정거장 · N'EX로 공항 직행", "time": "🚶 5–12분"}, "bonus": "비어홀 라이온 긴자 7초메 — 1934년 일본 최고(最古) 비어홀, 등록유형문화재. 정휘 성지순례 마무리.", "bonusJp": "ビヤホールライオン 銀座七丁目店", "items": [{"g": "sushi", "n": "쿠베이 본점", "jp": "銀座久兵衛 本店", "sub": "오마카세 · 1935", "th": "omakase", "d": "군함말이를 발명한 긴자 스시의 상징. 런치 오마카세(1.5만엔대)가 가성비. 예약 필수, 일·월 휴무.", "b": ["必食", "예약 필수", "일·월 휴무"], "seal": true, "lat": 35.66847, "lng": 139.76127}, {"g": "sushi", "n": "스시잔마이 본점", "jp": "すしざんまい 本店", "sub": "24시간", "th": "sushi", "d": "츠키지 24시간 참치 본점. 예약 없이 아무 때나 — 보험.", "b": ["24시간"], "lat": 35.6649, "lng": 139.7708}, {"g": "street", "n": "츠키지 장외 군것질", "jp": "築地場外市場", "sub": "길거리 해산물", "th": "street", "d": "계란말이 꼬치·구운 관자·오니기리. 걸으며 먹는 시장 — 8시 전, 13시 폐점.", "b": ["군것질", "현금"], "lat": 35.66477, "lng": 139.77025}, {"g": "cafe", "n": "키무라야 본점", "jp": "銀座木村家", "sub": "단팥빵 · 1874", "th": "bread", "d": "사쿠라 소금절임 단팥빵의 원조. 2층 카페 휴식.", "b": ["1874년"], "lat": 35.67167, "lng": 139.76527}, {"g": "bar", "n": "바 하이파이브", "jp": "Bar High Five", "sub": "클래식 칵테일", "th": "bar", "d": "세계 베스트바 단골, 긴자 카운터 칵테일의 정점 — 어른의 한 잔.", "b": ["世界級", "예약 권장"], "lat": 35.6718, "lng": 139.7615}, {"g": "bonus", "n": "도쿄역 마루노우치 역사", "jp": "東京駅 丸の内駅舎", "sub": "건축 · 명소", "th": "view", "d": "1914년 붉은 벽돌 르네상스 역사. 야경 라이트업이 포토스팟 — 공항 가기 전 마지막 컷.", "b": ["명소", "건축"], "lat": 35.6812, "lng": 139.7671}]}, {"id": "shopping", "hex": "#5a8f6a", "kanji": "買物", "tab": "마트·야식", "tabSub": "주류 · 야식", "title": "로컬 마트 · 야식 쇼핑", "sub": "SUPERMARKET — 현지인 장보기", "intro": "돈키호테 말고, 도쿄 사람들이 실제 장 보는 곳. 주류·야식·간식 쟁이기 좋은 로컬 슈퍼. 밤마다 숙소 근처에서 캔맥+안주 사 들고 들어가는 루트.", "joke": "※ 캐리어 무게의 8할은 여기서 결정됨. '하나만 더'가 수하물 초과를 부름.", "route": {"from": "숙소에서", "line": "도보 + 한 정거장", "detail": "긴자~신토미초 도보권, 대형은 토요스 방면", "time": "🚶🚇 5–15분"}, "bonus": "세이조 이시이 — 수입 와인·치즈·간식이 강한 고급 슈퍼. 긴자·역 구내 많아 선물용 픽업 최적.", "bonusJp": "成城石井", "items": [{"g": "bonus", "n": "라이프 긴자히가시점", "jp": "ライフ 銀座東店", "sub": "종합 슈퍼", "th": "cart", "d": "도쿄 표준 장보기 슈퍼. 주류·반찬·간식 다 있고 현지 물가 그대로 — 야식·캔맥 1순위.", "b": ["必食", "로컬 표준"], "seal": true, "lat": 35.6688, "lng": 139.772}, {"g": "bonus", "n": "세이조 이시이", "jp": "成城石井", "sub": "프리미엄 슈퍼", "th": "cart", "d": "수입 와인·치즈·간식 강한 고급 슈퍼. 긴자·역 구내 접근성 최고 — 선물용.", "b": ["수입 주류", "역 구내"], "lat": 35.6712, "lng": 139.7665}, {"g": "bonus", "n": "오케이 스토어", "jp": "オーケー", "sub": "디스카운트 슈퍼", "th": "cart", "d": "현지인 가성비 디스카운트 체인. 주류·대용량 간식이 싸다 — 본격 쟁이기.", "b": ["최저가", "대용량"], "lat": 35.6735, "lng": 139.78}, {"g": "bonus", "n": "빅카메라 유라쿠초", "jp": "ビックカメラ 有楽町", "sub": "대형 양판점 · 면세", "th": "bag", "d": "가전+주류+의약품+간식 원스톱. 면세 카운터 — 유라쿠초점이 숙소 도보권.", "b": ["면세", "원스톱"], "lat": 35.6745, "lng": 139.7635}]}];
+const TH={sushi:'<ellipse cx="18" cy="22" rx="11" ry="6"/><path d="M7 18c2-4 8-7 11-7s9 3 11 7c-2 3-6 4-11 4s-9-1-11-4z" fill="#f5d8c6" stroke="#c73e2d"/>',omakase:'<ellipse cx="18" cy="23" rx="12" ry="5"/><path d="M8 19c2-5 7-8 10-8s8 3 10 8" fill="#f0c9c0" stroke="#c73e2d"/><path d="M18 11l2-4 2 4" stroke="#c9a227"/>',ramen:'<path d="M5 16h26c0 7-5 12-13 12S5 23 5 16z"/><path d="M9 16c1-6 3-9 3-9M15 16c1-6 3-9 3-9M21 16c1-6 3-9 3-9" stroke="#c73e2d"/><path d="M24 4l8 6M26 2l8 6"/>',udon:'<path d="M5 16h26c0 7-5 12-13 12S5 23 5 16z"/><path d="M11 16q3-6 7-6t7 6" stroke="#c9a227"/>',curry:'<path d="M5 18h26c0 6-6 10-13 10S5 24 5 18z"/><path d="M12 18c0-3 3-5 6-5s6 2 6 5" fill="#c9882e" stroke="#a06a1a"/><path d="M22 8v8" stroke="#8a5a2e"/><path d="M20 8h4" stroke="#8a5a2e"/>',yakitori:'<path d="M18 4v28"/><circle cx="18" cy="10" r="4" fill="#f0c9c0"/><circle cx="18" cy="18" r="4" fill="#fff"/><circle cx="18" cy="26" r="4" fill="#dfe8d2"/>',robata:'<path d="M8 28c0-6 4-9 4-14M18 28c0-6 4-9 4-14M28 28c-4 0-8-2-8-6" stroke="#c73e2d"/><path d="M5 30h26"/>',izakaya:'<path d="M12 9h12M14 9c-4 4-4 14 0 18M22 9c4 4 4 14 0 18M14 27h8"/><path d="M11 14h14M11 22h14" stroke="#c73e2d"/><path d="M18 5v4M18 27v4"/>',tempura:'<path d="M10 24c-3-7 2-15 9-16 2 4 1 7-1 9 3-1 6 0 8 3-3 5-11 8-16 4z"/><path d="M8 28h22" stroke="#c73e2d"/>',street:'<path d="M18 4v28"/><circle cx="18" cy="9" r="3.5" fill="#f0c9c0"/><circle cx="18" cy="16" r="3.5" fill="#dfe8d2"/><circle cx="18" cy="23" r="3.5" fill="#f5d8a0"/>',cafe:'<path d="M7 13h18v9a8 8 0 0 1-16 0z"/><path d="M25 15h4a3 3 0 0 1 0 7h-4"/><path d="M12 9c0-2 2-2 2-4M18 9c0-2 2-2 2-4"/>',coffee:'<path d="M7 13h18v9a8 8 0 0 1-16 0z"/><path d="M25 15h4a3 3 0 0 1 0 7h-4"/><path d="M12 9c0-2 2-2 2-4M18 9c0-2 2-2 2-4"/>',bar:'<path d="M8 8h20l-10 12z"/><path d="M18 20v9M12 29h12"/><circle cx="22" cy="11" r="1.5" fill="#c73e2d" stroke="none"/>',hamburg:'<ellipse cx="18" cy="24" rx="13" ry="5"/><path d="M9 20a9 7 0 0 1 18 0c0 2-4 4-9 4s-9-2-9-4z" fill="#d9b08c" stroke="#8a5a2e"/><path d="M12 13c2-2 10-2 12 0" stroke="#c73e2d"/>',pizza:'<path d="M6 8l24 6-18 18z"/><circle cx="14" cy="16" r="2" fill="#c73e2d" stroke="none"/><circle cx="18" cy="23" r="2" fill="#c73e2d" stroke="none"/>',beer:'<rect x="8" y="10" width="16" height="20" rx="2"/><path d="M24 14h5a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5"/><path d="M8 10c0-4 16-4 16 0" fill="#fff"/><path d="M12 15v10M18 15v10" stroke="#c9a227"/>',bread:'<path d="M6 20a6 6 0 0 1 6-9c1-3 9-3 10 0a6 6 0 0 1 6 9v6H6z"/><path d="M12 18l3 4M18 16l3 4M24 18l-2 4" stroke="#c9a227"/>',parfait:'<path d="M10 8h16l-3 16a5 5 0 0 1-10 0z"/><path d="M16 24v6M12 30h8"/><circle cx="18" cy="8" r="3" fill="#f0c9c0" stroke="#c73e2d"/>',gelato:'<path d="M12 16h12l-6 16z"/><circle cx="14" cy="11" r="5"/><circle cx="22" cy="11" r="5" fill="#dfe8d2"/>',donut:'<circle cx="18" cy="18" r="11"/><circle cx="18" cy="18" r="4"/><path d="M10 12c2 2 4-1 6 1M22 9c1 2 4 1 5 3" stroke="#c73e2d"/>',monja:'<path d="M5 18h26c0 6-6 10-13 10S5 24 5 18z"/><circle cx="14" cy="22" r="1.5" fill="#c73e2d" stroke="none"/><circle cx="20" cy="23" r="1.5" fill="#c73e2d" stroke="none"/>',bowl:'<path d="M5 17h26c0 7-5 12-13 12S5 24 5 17z"/><ellipse cx="18" cy="15" rx="6" ry="3" fill="#f5d8a0" stroke="#c9a227"/>',fish:'<path d="M5 18c5-6 12-8 18-5l7-5-2 8 2 8-7-5c-6 3-13 1-18-5z"/><circle cx="22" cy="16" r="1.4" fill="#2b2722" stroke="none"/>',shirt:'<path d="M13 6l5 4 5-4 7 5-4 5-3-2v14H13V14l-3 2-4-5z"/>',torii:'<path d="M5 10c8-3 18-3 26 0M7 9v22M29 9v22M9 16h18M18 16v15"/>',view:'<path d="M18 4l7 24H11z"/><path d="M13 18h10M11 24h14M6 31h24"/>',art:'<circle cx="18" cy="18" r="4"/><circle cx="18" cy="18" r="9" stroke-dasharray="3 4"/><circle cx="18" cy="18" r="14" stroke-dasharray="2 6"/>',cart:'<circle cx="13" cy="29" r="2.5"/><circle cx="25" cy="29" r="2.5"/><path d="M4 6h4l3 16h16l3-11H9"/>',bag:'<path d="M9 12h18l-2 18H11z"/><path d="M13 12a5 5 0 0 1 10 0"/>',book:'<path d="M18 8c-3-2-8-2-12 0v20c4-2 9-2 12 0 3-2 8-2 12 0V8c-4-2-9-2-12 0z"/><path d="M18 8v20"/>',record:'<circle cx="18" cy="18" r="13"/><circle cx="18" cy="18" r="3" fill="#c73e2d" stroke="none"/><circle cx="18" cy="18" r="8" stroke-dasharray="1 3"/>'};
 const thumb=t=>`<span class="thumb"><svg viewBox="0 0 36 36">${TH[t]||TH.bowl}</svg></span>`;
 const HOTEL={lat:35.6705,lng:139.7660};
+const regionById={}; REGIONS.forEach(r=>regionById[r.id]=r);
 
-/* ───── 지역 데이터: items = [{g:장르키, n,jp,name세부, d,th,b,seal,lat,lng}] ───── */
-const REGIONS=[
-{
-  id:"ginza",hex:"#b08d57",kanji:"銀座",tab:"긴자·츠키지",tabSub:"숙소 · 미식",
-  title:"긴자 · 츠키지",sub:"GINZA / TSUKIJI — 베이스캠프",
-  intro:"숙소가 있는 홈그라운드. 도보권에 일본 최고(最古) 비어홀, 스시 오마카세, 츠키지 길거리 군것질이 다 모여 있어.",
-  joke:"※ 숙소에서 가깝다는 건 '잠깐 쉬러 들어갔다 안 나온다'는 뜻이기도 함.",
-  route:{from:"숙소에서",line:"전부 도보권",detail:"츠키지 도보 12분 · 긴자 일대 5분 내",time:"🚶 5–12분"},
-  bonus:"비어홀 라이온 긴자 7초메 — 1934년 일본 최고(最古) 비어홀, 등록유형문화재. 정휘 성지순례 1순위.",
-  bonusJp:"ビヤホールライオン 銀座七丁目店",
-  items:[
-    {g:"sushi",n:"쿠베이 본점",jp:"銀座久兵衛 本店",sub:"오마카세 · 1935",th:"omakase",d:"군함말이를 발명한 긴자 스시의 상징. 런치 오마카세(1.5만엔대)가 가성비 — 이번 여행 메인. 예약 필수, 일·월 휴무.",b:["必食","예약 필수","런치 추천"],seal:true,lat:35.66847,lng:139.76127},
-    {g:"sushi",n:"스시잔마이 본점",jp:"すしざんまい 本店",sub:"24시간",th:"sushi",d:"츠키지 24시간 참치 본점. 예약 없이 아무 때나 — 일정 꼬였을 때의 보험.",b:["24시간","예약 불필요"],lat:35.6649,lng:139.7708},
-    {g:"street",n:"야마초 타마고야키",jp:"築地山長",sub:"계란말이 꼬치",th:"street",d:"츠키지 장외, 갓 부친 계란말이 한 조각. 시장 군것질 첫 입.",b:["꼬치","현금"],lat:35.6650,lng:139.7697},
-    {g:"street",n:"마루토요 오니기리",jp:"おにぎり屋 丸豊",sub:"오니기리 · 1993",th:"onigiri",d:"갓 쥔 대형 주먹밥. 걸으면서 먹는 시장 아침의 정석.",b:["먹으며 걷기"],lat:35.6645,lng:139.7689},
-    {g:"izakaya",n:"유라쿠초 가드시타",jp:"有楽町産直横丁",sub:"고가 밑 이자카야",th:"izakaya",d:"고가철로 밑, 전철 지나가는 소리가 BGM. 음식보다 공기가 메인 디시.",b:["분위기","맥주"],lat:35.67223,lng:139.76031},
-    {g:"cafe",n:"키무라야 본점",jp:"銀座木村家",sub:"단팥빵 · 1874",th:"bread",d:"사쿠라 소금절임 올린 단팥빵의 원조. 2층 카페 휴식 가능.",b:["1874년"],lat:35.67167,lng:139.76527},
-    {g:"cafe",n:"시세이도 팔러",jp:"資生堂パーラー 銀座本店",sub:"파르페 · 1902",th:"parfait",d:"시세이도가 만든 살롱의 계절 과일 파르페. 긴자식 호사.",b:["1902년"],lat:35.6688,lng:139.7634},
-    {g:"bar",n:"바 하이파이브",jp:"Bar High Five",sub:"클래식 칵테일",th:"bar",d:"세계 베스트바 단골, 긴자 카운터 칵테일의 정점. 바텐더 우치다 — 어른의 한 잔.",b:["世界級","예약 권장"],lat:35.6718,lng:139.7615}
-  ]
-},
-{
-  id:"toyosu",hex:"#3d7fb0",kanji:"豊洲",tab:"토요스",tabSub:"새벽 스시 · 팀랩",
-  title:"토요스",sub:"TOYOSU — 새벽 스시와 디지털 피서",
-  intro:"옛 츠키지 장내시장이 통째로 이전한 거대 현대식 시장. '제대로 된 한 끼' 새벽 오마카세가 본진. 옆엔 teamLab Planets — 한낮 폭염의 피난처.",
-  joke:"※ 새벽 스시는 첫차 타고 줄 서는 게 국룰. 잠 vs 인생 스시, 둘 중 하나를 고르시오.",
-  route:{from:"숙소에서",line:"택시 / 유라쿠초선+유리카모메",detail:"새벽이면 택시가 정답",time:"🚕 15분 / 🚇 25분"},
-  bonus:"teamLab Planets TOKYO — 맨발로 물속 걷는 몰입 전시. 7월 말엔 관광이 아니라 피서. 주말 오전 슬롯 예약 필수.",
-  bonusJp:"チームラボプラネッツ TOKYO DMM",
-  items:[
-    {g:"sushi",n:"스시다이",jp:"寿司大",sub:"오마카세 조식 · 끝판왕",th:"omakase",d:"구 츠키지 장내의 전설. 새벽 웨이팅(2~3시간)의 가치가 있는 오마카세 조식 — 토요스 스시의 상징.",b:["必食","새벽 권장","끝판왕"],seal:true,lat:35.6452,lng:139.7858},
-    {g:"sushi",n:"다이와스시",jp:"大和寿司",sub:"오마카세 · 양대산맥",th:"omakase",d:"스시다이와 토요스 양대산맥. 줄이 상대적으로 빠른 편 — 시간 압박 있으면 이쪽.",b:["양대산맥","비교적 빠름"],lat:35.6453,lng:139.7860},
-    {g:"bonus",n:"센캬쿠반라이 해산물덮밥",jp:"豊洲 千客万来",sub:"카이센동 · 2024 신규",th:"bowl",d:"2024 오픈 에도풍 식도락 시설. 우니·이쿠라·참치 덮밥 골라먹기 + 옥상 족욕탕. 스시 줄 부담되면 여기.",b:["2024 신규","옥상 족욕"],lat:35.6447,lng:139.7872},
-    {g:"bonus",n:"토요스 시장 견학데크",jp:"豊洲市場 見学デッキ",sub:"참치 경매 견학",th:"fish",d:"참치 경매를 유리 너머로. 장외 군것질의 츠키지와 다른 '장내' 스케일.",b:["견학 무료"],lat:35.6455,lng:139.7865}
-  ]
-},
-{
-  id:"tsukishima",hex:"#cf7a37",kanji:"月島",tab:"츠키시마",tabSub:"몬자 거리",
-  title:"츠키시마",sub:"TSUKISHIMA — 몬자야키의 성지",
-  intro:"골목 전체가 몬자야키집인 동네. 70여 곳이 늘어선 '몬자 스트리트'가 핵심. 직접 철판에 부쳐 먹는 도쿄 서민 음식의 본진 — 긴자에서 한 정거장.",
-  joke:"※ 몬자는 만드는 법 모르면 점원이 부쳐줌. 자존심 부리다 태우지 말 것.",
-  route:{from:"숙소에서",line:"오에도선",detail:"츠키지시조역→츠키시마역 1정거장 (또는 도보 15분)",time:"🚇 약 12분"},
-  bonus:"몬자 모헤지의 '명란떡 몬자(明太子もちもんじゃ)' — 가장 유명한 한 집을 꼽으라면 여기. 연일 행렬.",
-  bonusJp:"月島もんじゃ もへじ",
-  items:[
-    {g:"bonus",n:"몬자 모헤지",jp:"月島もんじゃ もへじ",sub:"몬자 · 명란떡",th:"monja",d:"150년 어물전 직영, 연일 행렬. 명물 명란떡 몬자가 시그니처 — 가장 유명한 한 집.",b:["必食","행렬","명란떡"],seal:true,lat:35.6644,lng:139.7836},
-    {g:"bonus",n:"몬자 다루마 본점",jp:"月島もんじゃ だるま 月島本店",sub:"몬자 · 고민가풍",th:"monja",d:"4번가, 빨간 노렌+고민가 건물. 명란치즈떡·새우듬뿍 몬자가 간판.",b:["분위기","메뉴 다양"],lat:35.6640,lng:139.7840},
-    {g:"bonus",n:"오시오 본점",jp:"おしお 本店",sub:"몬자 · 안정적",th:"monja",d:"관광객·현지인 모두에게 오래 사랑받은 명가. 40석 넓어 회전 빠르고 그룹도 편함.",b:["넓은 좌석","무난"],lat:35.6648,lng:139.7833},
-    {g:"bonus",n:"몬자 쿠라",jp:"もんじゃ 蔵",sub:"몬자 · 가성비",th:"monja",d:"3번가, 화이트소스 베이스 몬자가 독특. 육수 호평 — 가성비 라인.",b:["가성비","육수 호평"],lat:35.6651,lng:139.7835},
-    {g:"street",n:"츠키시마 만쥬",jp:"つきしま小町",sub:"화과자 · 만쥬",th:"bread",d:"몬자 거리 산책 중 집어먹는 명물 만쥬·도라야키. 식후 입가심.",b:["먹으며 걷기"],lat:35.6646,lng:139.7842}
-  ]
-},
-{
-  id:"asakusa",hex:"#cf4a37",kanji:"浅草",tab:"아사쿠사",tabSub:"전통 관광",
-  title:"아사쿠사",sub:"ASAKUSA — 1400년의 도쿄",
-  intro:"센소지를 중심으로 한 전통 1번지. 향 연기, 나카미세 먹거리 거리, 인력거가 공존하는 옛 정취. 긴자선 한 줄로 환승 없이.",
-  joke:"※ 센소지는 8시 전엔 참배객이, 9시 후엔 인류 전체가 옴. 둘 중 하나를 고르시오.",
-  route:{from:"숙소에서",line:"긴자선 직통",detail:"긴자역→아사쿠사역, 환승 0회",time:"🚇 약 20분"},
-  bonus:"센소지 + 나카미세 거리 — 628년 창건, 도쿄 최고(最古) 사찰. 8시 전 도착이 절대 원칙(더위+인파).",
-  bonusJp:"浅草寺",
-  items:[
-    {g:"tempura",n:"다이코쿠야 텐푸라",jp:"大黒家天麩羅",sub:"에도식 텐동 · 1887",th:"tempura",d:"새카만 비법 타레에 통째로 적신 에도마에 텐동의 원형. 줄은 보이는 것보다 김.",b:["1887년","행렬"],lat:35.7129,lng:139.7950},
-    {g:"hamburg",n:"요시카미",jp:"洋食ヨシカミ",sub:"경양식",th:"hamburg",d:"'너무 맛있어서 죄송합니다'가 공식 간판 문구. 하야시라이스·오므라이스·함바그.",b:["쇼와 감성"],lat:35.7132,lng:139.7942},
-    {g:"izakaya",n:"호피도리",jp:"ホッピー通り",sub:"니코미 골목",th:"izakaya",d:"소힘줄 조림+호피의 노천 골목. 해 지기 전부터 마시는 게 이 골목의 문법.",b:["노천","낮술 공인"],lat:35.7146,lng:139.7918},
-    {g:"street",n:"카게츠도 멜론빵",jp:"浅草花月堂 本店",sub:"멜론빵",th:"bread",d:"9시 오픈 직후 갓 구운 잠보 멜론빵 — 겉바속촉의 천장. 현금만.",b:["必食","9:00~","현금만"],seal:true,lat:35.71463,lng:139.79517},
-    {g:"street",n:"스즈키엔 말차 젤라토",jp:"壽々喜園 浅草本店",sub:"젤라토",th:"gelato",d:"'세계에서 가장 진한 말차' No.7. 농도 1~7단계 — 7은 말차의 멱살을 잡는 수준.",b:["No.7 도전"],lat:35.7174,lng:139.7975},
-    {g:"udon",n:"아사쿠사 이마한",jp:"浅草今半 国際通り本店",sub:"스키야키 · 1895",th:"bowl",d:"스키야키 명가. 런치 한정 백년규동(百年牛丼)이 가성비 진입로 — 우동 아니지만 노포 한 끼로.",b:["1895년","런치 한정"],lat:35.7126,lng:139.7902}
-  ]
-},
-{
-  id:"shibuya",hex:"#2e9e92",kanji:"渋谷",tab:"시부야·오모테산도",tabSub:"트렌드 · 세련",
-  title:"시부야 · 오모테산도",sub:"SHIBUYA / OMOTESANDO — 도쿄의 '지금'",
-  intro:"스크램블 교차로의 시부야부터 가로수길 오모테산도까지 이어지는 권역. 함바그 신드롬·세련된 카페·크래프트맥주가 다 모인 트렌드 1번지.",
-  joke:"※ 여기서 길 잃는 건 정상. 부부가 흩어지면 하치코 동상 앞 집결.",
-  route:{from:"숙소에서",line:"긴자선 직통",detail:"긴자역→시부야/오모테산도역, 환승 0회",time:"🚇 17–20분"},
-  bonus:"시부야 스카이 — 229m 옥상 전망, 도쿄 최고 뷰. 일몰 슬롯은 예약 전쟁이라 갈 거면 미리.",
-  bonusJp:"SHIBUYA SKY",
-  items:[
-    {g:"hamburg",n:"히키니쿠토코메 시부야",jp:"挽肉と米 渋谷",sub:"숯불 함바그 · 백명점",th:"hamburg",d:"'갓 갈고 갓 굽고 갓 지은' 함바그 3개+솥밥 단일 메뉴. SNS 함바그 붐의 진원지, 洋食 백명점 — 웹 예약/정리권.",b:["必食","백명점 3.72","정리권"],seal:true,lat:35.6580,lng:139.6957},
-    {g:"udon",n:"우동 야마쵸",jp:"うどん 山長",sub:"사누키 우동 · 빕구르망",th:"udon",d:"시부야역 3분, 3년 연속 빕구르망+백명점의 사누키 우동. 홀짝수일에 면 굵기가 바뀜.",b:["빕구르망","백명점"],lat:35.6588,lng:139.6985},
-    {g:"sushi",n:"우오베이 시부야",jp:"魚べい 渋谷道玄坂店",sub:"회전스시 · 가성비",th:"sushi",d:"터치패널 주문→신칸센 레일 배송. 한 접시 100엔대 — 가볍게 스시 수혈.",b:["가성비"],lat:35.6582,lng:139.6964},
-    {g:"bar",n:"굿비어 포셋",jp:"グッドビアファウセッツ",sub:"크래프트맥주",th:"beer",d:"탭 40개+의 시부야 크래프트 성지. 전국 브루어리 비교 시음 — 남편 침묵 구간.",b:["탭 40+","맥주"],lat:35.6605,lng:139.6938},
-    {g:"cafe",n:"빵토에스프레소토",jp:"パンとエスプレッソと",sub:"오모테산도 · 베이커리",th:"bread",d:"오모테산도 골목, 8시 오픈. 식빵 '무'를 통째로 구운 프렌치토스트가 시그니처.",b:["8:00~"],lat:35.6699,lng:139.7079},
-    {g:"cafe",n:"아임도넛? 오모테산도",jp:"I'm donut ? 表参道",sub:"생도넛",th:"donut",d:"생도넛 신드롬. 산 자리에서 바로 한 입이 국룰 — 오모테산도 산책과 세트.",b:["행렬"],lat:35.6668,lng:139.7090},
-    {g:"izakaya",n:"시부야요코초",jp:"渋谷横丁",sub:"이자카야 푸드코트",th:"izakaya",d:"미야시타파크 1층, 일본 각지 향토안주 포장마차 거리. 분위기+맥주는 합격, 새벽 5시까지.",b:["~새벽 5시","분위기"],lat:35.66061,lng:139.70178}
-  ]
-},
-{
-  id:"shinjuku",hex:"#8a5fb8",kanji:"新宿",tab:"신주쿠",tabSub:"라멘 · 밤",
-  title:"신주쿠",sub:"SHINJUKU — 라멘과 밤의 동네",
-  intro:"세계 최대 환승역을 낀 도쿄 최대 번화가. 라멘 백명점 9곳·이자카야·바가 밀집한 격전지. 밤이 본체인 동네라 저녁 원정으로 딱.",
-  joke:"※ 골든가이의 '한 집만'이 다섯 집이 되는 구조적 결함. 설계 단계의 문제라 의지로 해결 불가.",
-  route:{from:"숙소에서",line:"마루노우치선 직통",detail:"긴자역→신주쿠역, 환승 0회",time:"🚇 약 17분"},
-  bonus:"오모이데요코초 + 골든가이 — 쇼와시대 야키토리 골목과 초소형 바 200개 미로. 밤의 신주쿠 그 자체.",
-  bonusJp:"思い出横丁・新宿ゴールデン街",
-  items:[
-    {g:"ramen",n:"후운지",jp:"風雲児",sub:"츠케멘 · 3.7+",th:"ramen",d:"닭+어패류 더블스프 츠케멘의 교과서. 오픈(11시) 직전 줄서기가 웨이팅 최소화 공식.",b:["必食","타베로그 3.7+","웨이팅"],seal:true,lat:35.68683,lng:139.69664},
-    {g:"ramen",n:"토시오카",jp:"自家製中華そば としおか",sub:"중화소바 · 백명점",th:"ramen",d:"라멘 백명점 2025 선정. 자가제면 정통 중화소바 — 신주쿠 라멘 격전지의 실력파.",b:["백명점 2025"],lat:35.6938,lng:139.7045},
-    {g:"udon",n:"우동신",jp:"うどん慎",sub:"사누키 우동 · 백명점",th:"udon",d:"명란버터 카르보나라 우동의 백명점. 정리권 받고 근처 한 바퀴 돌다 복귀.",b:["백명점","정리권제"],lat:35.68649,lng:139.69700},
-    {g:"yakitori",n:"오모이데요코초 야키토리",jp:"思い出横丁",sub:"야키토리 · 생맥",th:"yakitori",d:"쇼와시대 골목, 자리 있는 집 아무 데나가 정답. 꼬치+생맥 1차의 표준.",b:["분위기","현금 권장"],lat:35.69270,lng:139.69958},
-    {g:"izakaya",n:"신주쿠 카부토",jp:"新宿カブト",sub:"장어꼬치 노포",th:"izakaya",d:"오모이데요코초의 전설적 장어꼬치(우나기) 노포. 좁고 진한 카운터 — 호불호 갈리는 마니아 코스.",b:["노포","마니아"],lat:35.6928,lng:139.6996},
-    {g:"bar",n:"골든가이 바호핑",jp:"新宿ゴールデン街",sub:"바 · 위스키",th:"bar",d:"한 집에 한두 잔씩 옮겨 다니는 좁고 진한 도쿄의 밤. 커버차지 입구 확인.",b:["2차","심야"],lat:35.69411,lng:139.70476},
-    {g:"cafe",n:"베르크 BERG",jp:"ベルク",sub:"카페 · 모닝",th:"coffee",d:"루미네에스트 B1, 7시부터. 자가제 햄 모닝플레이트와 생맥주가 공존 — 아침 맥주 합법 구역.",b:["7:00~","로컬 정석"],lat:35.6919,lng:139.7008}
-  ]
-},
-{
-  id:"shimokita",hex:"#7b8b3a",kanji:"下北沢",tab:"시모키타자와",tabSub:"빈티지 · 카레",
-  title:"시모키타자와",sub:"SHIMOKITAZAWA — 빈티지의 성지",
-  intro:"'시모키타'로 불리는 빈티지 패션 본진. 골목마다 구제숍이 빽빽하고, 음악·연극·카레가 뒤섞인 자유로운 동네. 카레 명점 거리로도 유명해.",
-  joke:"※ 한 집만 보고 나오는 건 불가능한 동네. 시작하면 골목이 골목을 부름.",
-  route:{from:"숙소에서",line:"긴자선→게이오이노카시라선",detail:"긴자→시부야 환승→시모키타자와역",time:"🚇 약 35–40분"},
-  bonus:"구제숍 거리 — 플라밍고·NOTIME·가스램프·BETTER 등 골목 전체가 빈티지. 와이프 빈티지 쇼핑 메인 무대.",
-  bonusJp:"下北沢 古着屋街",
-  items:[
-    {g:"curry",n:"시모키타자와 카레",jp:"下北沢 旧ヤム邸",sub:"스파이스 카레",th:"curry",d:"카레의 거리 시모키타의 대표 스파이스 카레집. 여러 카레를 한 접시에 섞는 '아이가케'가 명물.",b:["必食","거리 명물"],seal:true,lat:35.6620,lng:139.6672},
-    {g:"bonus",n:"플라밍고 시모키타",jp:"フラミンゴ 下北沢",sub:"구제 · 대표격",th:"shirt",d:"시모키타 대표 구제 체인. 미·유럽 매입 중심에 메·여 물량 풍부 — 입문부터 빈티지까지.",b:["대표격","폭넓은 물량"],lat:35.6616,lng:139.6675},
-    {g:"bonus",n:"BETTER 시모키타",jp:"BETTER 下北沢",sub:"구제 · 셀렉트",th:"shirt",d:"90s 스트리트~50·60s 빈티지에 랄프로렌 라인이 강한 셀렉트숍 — 옷 좀 아는 사람들이 가는 집.",b:["프로 추천","셀렉트"],lat:35.6602,lng:139.6672},
-    {g:"cafe",n:"보너스 트랙",jp:"BONUS TRACK",sub:"복합공간 · 카페",th:"book",d:"옛 선로 부지 복합공간. 개성 점포·카페·책방 — 쇼핑 중 당 충전 + 에어컨 피서.",b:["피서 겸용"],lat:35.6595,lng:139.6655},
-    {g:"bar",n:"시모키타 레코드바",jp:"レコード店街",sub:"음악 바 · LP",th:"record",d:"음악의 거리다운 중고 LP숍·레코드바. 밤엔 음악 틀어주는 작은 바로 — 동네 색이 진함.",b:["음악","동네 색"],lat:35.6618,lng:139.6668}
-  ]
-},
-{
-  id:"ebisu",hex:"#d98e2b",kanji:"恵比寿",tab:"에비스·나카메구로",tabSub:"양조장 · 어른",
-  title:"에비스 · 나카메구로",sub:"EBISU / NAKAMEGURO — 맥주와 어른의 동네",
-  intro:"맥주가 동네 이름이 된 곳. 옛 맥주공장 부지에 양조장·박물관이 있고, 한 정거장 옆 나카메구로는 강변 카페 산책로. 정휘 취향 정중앙.",
-  joke:"※ 남편 실종 신고 전, 양조장부터 수색할 것. 발견 확률 약 90%.",
-  route:{from:"숙소에서",line:"히비야선 직통",detail:"긴자/히가시긴자역→에비스역, 환승 0회",time:"🚇 약 20분"},
-  bonus:"Yebisu Brewery Tokyo — 입장 무료 양조장+박물관, 여기서만 파는 한정 에비스 탭 시음이 맥주 서사의 엔딩. 화요일 휴무.",
-  bonusJp:"YEBISU BREWERY TOKYO",
-  items:[
-    {g:"ramen",n:"AFURI 에비스 본점",jp:"AFURI 恵比寿",sub:"유자소금라멘",th:"ramen",d:"유자 향의 담려계 라멘 — 폭염엔 돈코츠보다 압도적으로 이게 정답.",b:["必食","여름의 정답"],seal:true,lat:35.64830,lng:139.71088},
-    {g:"yakitori",n:"야키톤 타츠야",jp:"やきとん たつや 恵比寿",sub:"돼지꼬치 · 1950s",th:"yakitori",d:"에비스 명물 야키톤, 한 꼬치 100엔대. 서서 마시는 쇼와의 맛.",b:["노포","초저가"],lat:35.6469,lng:139.7103},
-    {g:"izakaya",n:"에비스요코초",jp:"恵比寿横丁",sub:"레트로 이자카야",th:"izakaya",d:"옛 시장 건물 안 포장마차 골목. 17시 오픈 — 저녁 비행기일 때만 유효한 보너스.",b:["17:00~","조건부"],lat:35.64822,lng:139.71064},
-    {g:"cafe",n:"아임도넛? 나카메구로",jp:"I'm donut ? 中目黒",sub:"생도넛 본점",th:"donut",d:"생도넛 신드롬의 발상지. 9시 오픈 직후가 줄 최단+갓 튀긴 확률 최고.",b:["9:00~","본점"],lat:35.6441,lng:139.6991},
-    {g:"cafe",n:"오니버스커피",jp:"オニバスコーヒー 中目黒店",sub:"스페셜티 커피",th:"coffee",d:"철길 옆 2층에서 전철 지나가는 걸 보며 한 잔. 도쿄 스페셜티 씬 대표.",b:["9:00~"],lat:35.6452,lng:139.6985},
-    {g:"hamburg",n:"세이린칸",jp:"聖林館",sub:"나폴리피자 (나카메구로)",th:"pizza",d:"마르게리타·마리나라 단 두 장으로 승부하는 피자 성지 — 함바그 아니지만 나카메구로 필수 한 끼.",b:["메뉴 2개","성지"],lat:35.6450,lng:139.6979}
-  ]
-},
-{
-  id:"shopping",hex:"#5a8f6a",kanji:"買物",tab:"마트·야식",tabSub:"주류 · 야식",
-  title:"로컬 마트 · 야식 쇼핑",sub:"SUPERMARKET — 현지인 장보기",
-  intro:"돈키호테 말고, 도쿄 사람들이 실제 장 보는 곳. 주류·야식·간식 쟁이기 좋은 로컬 슈퍼 위주. 숙소 근처에서 밤에 캔맥+안주 사 들고 들어가는 루트.",
-  joke:"※ 캐리어 무게의 8할은 여기서 결정됨. '하나만 더'가 수하물 초과를 부름.",
-  route:{from:"숙소에서",line:"도보 + 한 정거장",detail:"긴자~신토미초 도보권, 대형은 토요스 방면",time:"🚶🚇 5–15분"},
-  bonus:"세이조 이시이 — 수입 와인·치즈·간식이 강한 고급 슈퍼. 긴자·역 구내 많아 선물용 주류·간식 픽업 최적.",
-  bonusJp:"成城石井",
-  items:[
-    {g:"bonus",n:"라이프 긴자히가시점",jp:"ライフ 銀座東店",sub:"종합 슈퍼",th:"cart",d:"도쿄 사람들의 표준 장보기 슈퍼. 주류·반찬(소자이)·간식 다 있고 현지 물가 그대로 — 야식·캔맥 쟁이기 1순위.",b:["必食","로컬 표준","주류·반찬"],seal:true,lat:35.6688,lng:139.7720},
-    {g:"bonus",n:"세이조 이시이",jp:"成城石井",sub:"프리미엄 슈퍼",th:"cart",d:"수입 와인·치즈·간식이 강한 고급 슈퍼. 긴자·역 구내에 많아 접근성 최고 — 선물용 픽업.",b:["수입 주류","역 구내"],lat:35.6712,lng:139.7665},
-    {g:"bonus",n:"오케이 스토어",jp:"オーケー",sub:"디스카운트 슈퍼",th:"cart",d:"현지인이 가성비로 사랑하는 디스카운트 체인. 주류·대용량 간식이 싸다 — 본격 쟁이기용.",b:["최저가","대용량"],lat:35.6735,lng:139.7800},
-    {g:"bonus",n:"빅카메라 유라쿠초",jp:"ビックカメラ 有楽町",sub:"대형 양판점 · 면세",th:"bag",d:"가전+주류+의약품+간식 원스톱. 면세 카운터 있어 한 번에 — 유라쿠초점이 숙소 도보권.",b:["면세","원스톱"],lat:35.6745,lng:139.7635}
-  ]
-}
-];
-
-const FORTUNES=[
-  ["大吉","오늘 웨이팅 0분. 대신 내일 두 배로 돌아옴."],
-  ["大吉","우니가 인생 우니. 지갑 상태는 묻지 않기로 함."],
-  ["中吉","몬자를 안 태우고 부치는 데 성공함. 점원이 도와줌."],
-  ["中吉","구제숍에서 인생템 발견. 사이즈는 한 치수 작음."],
-  ["小吉","'딱 한 잔만'이 성공함. 단, 오늘 하루 한정 기적."],
-  ["吉","지하철 반대 방향 탑승. 그런데 그 동네가 더 좋았음."],
-  ["末吉","소나기를 만남. 하지만 그 덕에 들어간 가게가 인생 가게."],
-  ["大吉","캐리어가 아직 닫힘 (세이조 이시이 방문 전 한정)."]
-];
+const FORTUNES=[["大吉","오늘 웨이팅 0분. 대신 내일 두 배로 돌아옴."],["大吉","우니가 인생 우니. 지갑 상태는 묻지 않기로 함."],["中吉","구제숍에서 인생템 발견. 사이즈는 한 치수 작음."],["中吉","빔즈에서 '이건 일본 한정' 한마디에 지갑이 열림."],["小吉","'딱 한 잔만'이 성공함. 단, 오늘 하루 한정 기적."],["吉","지하철 반대 방향 탑승. 그런데 그 동네가 더 좋았음."],["末吉","소나기를 만남. 하지만 그 덕에 들어간 가게가 인생 가게."],["大吉","캐리어가 아직 닫힘 (세이조 이시이 방문 전 한정)."]];
 document.getElementById('omikuji-btn').onclick=()=>{const f=FORTUNES[Math.floor(Math.random()*FORTUNES.length)];document.getElementById('omikuji-out').innerHTML=`<b>${f[0]}</b>${f[1]}`;};
-
 const toast=document.getElementById('toast');let toastT=null;
 function copyText(t){const done=()=>{toast.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>toast.classList.remove('show'),1400);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>legacy());}else legacy();function legacy(){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(e){}ta.remove();}}
 
-const MINLAT=35.638,MAXLAT=35.726,MINLNG=139.655,MAXLNG=139.812;
-const W=1000,H=1000;
-const PX=lng=>(lng-MINLNG)/(MAXLNG-MINLNG)*W;
-const PY=lat=>(MAXLAT-lat)/(MAXLAT-MINLAT)*H;
-
-const svg=document.getElementById('emap');
-const NS="http://www.w3.org/2000/svg";
-svg.innerHTML=`
-<defs>
-<pattern id="waves" width="56" height="28" patternUnits="userSpaceOnUse"><g fill="none" stroke="#9fc2bd" stroke-opacity=".5" stroke-width="1.3"><path d="M0 28a14 14 0 0 1 28 0M28 28a14 14 0 0 1 28 0M-14 14a14 14 0 0 1 28 0M14 14a14 14 0 0 1 28 0M42 14a14 14 0 0 1 28 0"/></g></pattern>
-<pattern id="asanoha" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M18 0 L36 18 L18 36 L0 18 Z" fill="none" stroke="#d8cdb4" stroke-width=".7" stroke-opacity=".55"/></pattern>
-</defs>
-<rect width="1000" height="1000" fill="#f3ecdb"/><rect width="1000" height="1000" fill="url(#asanoha)"/>
-<path d="M735,1000 L740,820 Q748,720 815,675 L860,648 Q900,632 940,652 L1000,690 L1000,1000 Z" fill="var(--mizu)"/>
-<path d="M735,1000 L740,820 Q748,720 815,675 L860,648 Q900,632 940,652 L1000,690 L1000,1000 Z" fill="url(#waves)"/>
-<rect x="845" y="730" width="120" height="150" rx="24" fill="#f3ecdb" stroke="#c9bda0" stroke-width="1.5"/>
-<path d="M820,690 C835,580 865,470 890,360 C912,270 930,190 948,110" fill="none" stroke="var(--mizu)" stroke-width="15" stroke-linecap="round"/>
-<path d="M250,760 C300,810 380,850 470,890" fill="none" stroke="var(--mizu)" stroke-width="8" stroke-linecap="round"/>
-<ellipse cx="560" cy="430" rx="56" ry="42" fill="#cdd9bd" stroke="#b3c49b" stroke-width="1.5"/>
-<ellipse cx="330" cy="540" rx="40" ry="46" fill="#cdd9bd" stroke="#b3c49b" stroke-width="1.5"/>
-<text class="geo-label" x="560" y="435" font-size="15" text-anchor="middle">皇居</text>
-<text class="geo-label" x="330" y="545" font-size="12" text-anchor="middle">明治神宮</text>
-<text class="water-label" x="930" y="930" font-size="22" text-anchor="middle">東 京 湾</text>
-<text class="water-label" x="885" y="430" font-size="13" transform="rotate(70 885 430)" text-anchor="middle">隅田川</text>
-<g transform="translate(58,70)" opacity=".7"><circle r="20" fill="none" stroke="#9a8e74" stroke-width="1.5"/><path d="M0,-16 L5,4 L0,0 L-5,4 Z" fill="#c73e2d"/><text class="geo-label" y="-26" font-size="13" text-anchor="middle">北</text></g>
-<g id="zones"></g><g id="pins"></g><g id="hotel"></g>`;
-
+const MINLAT=35.638,MAXLAT=35.726,MINLNG=139.655,MAXLNG=139.812,W=1000,H=1000;
+const PX=lng=>(lng-MINLNG)/(MAXLNG-MINLNG)*W, PY=lat=>(MAXLAT-lat)/(MAXLAT-MINLAT)*H;
+const svg=document.getElementById('emap'),NS="http://www.w3.org/2000/svg";
+svg.innerHTML=`<defs><pattern id="waves" width="56" height="28" patternUnits="userSpaceOnUse"><g fill="none" stroke="#9fc2bd" stroke-opacity=".5" stroke-width="1.3"><path d="M0 28a14 14 0 0 1 28 0M28 28a14 14 0 0 1 28 0M-14 14a14 14 0 0 1 28 0M14 14a14 14 0 0 1 28 0M42 14a14 14 0 0 1 28 0"/></g></pattern><pattern id="asanoha" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M18 0 L36 18 L18 36 L0 18 Z" fill="none" stroke="#d8cdb4" stroke-width=".7" stroke-opacity=".55"/></pattern></defs><rect width="1000" height="1000" fill="#f3ecdb"/><rect width="1000" height="1000" fill="url(#asanoha)"/><path d="M735,1000 L740,820 Q748,720 815,675 L860,648 Q900,632 940,652 L1000,690 L1000,1000 Z" fill="var(--mizu)"/><path d="M735,1000 L740,820 Q748,720 815,675 L860,648 Q900,632 940,652 L1000,690 L1000,1000 Z" fill="url(#waves)"/><rect x="845" y="730" width="120" height="150" rx="24" fill="#f3ecdb" stroke="#c9bda0" stroke-width="1.5"/><path d="M820,690 C835,580 865,470 890,360 C912,270 930,190 948,110" fill="none" stroke="var(--mizu)" stroke-width="15" stroke-linecap="round"/><path d="M250,760 C300,810 380,850 470,890" fill="none" stroke="var(--mizu)" stroke-width="8" stroke-linecap="round"/><ellipse cx="560" cy="430" rx="56" ry="42" fill="#cdd9bd" stroke="#b3c49b" stroke-width="1.5"/><ellipse cx="330" cy="540" rx="40" ry="46" fill="#cdd9bd" stroke="#b3c49b" stroke-width="1.5"/><text class="geo-label" x="560" y="435" font-size="15" text-anchor="middle">皇居</text><text class="geo-label" x="330" y="545" font-size="12" text-anchor="middle">明治神宮</text><text class="water-label" x="930" y="930" font-size="22" text-anchor="middle">東 京 湾</text><text class="water-label" x="885" y="430" font-size="13" transform="rotate(70 885 430)" text-anchor="middle">隅田川</text><g transform="translate(58,70)" opacity=".7"><circle r="20" fill="none" stroke="#9a8e74" stroke-width="1.5"/><path d="M0,-16 L5,4 L0,0 L-5,4 Z" fill="#c73e2d"/><text class="geo-label" y="-26" font-size="13" text-anchor="middle">北</text></g><g id="zones"></g><g id="pins"></g><g id="hotel"></g>`;
 const zonesG=svg.querySelector('#zones'),pinsG=svg.querySelector('#pins'),hotelG=svg.querySelector('#hotel');
 const allPins=[],zoneByRegion={},regionLL={};
-REGIONS.forEach(r=>{
-  const pts=[];regionLL[r.id]=[];
-  r.items.forEach(it=>{
-    const gen=GENRES[it.g];const x=PX(it.lng),y=PY(it.lat);pts.push([x,y]);regionLL[r.id].push([it.lat,it.lng]);
+REGIONS.forEach(r=>{const pts=[];regionLL[r.id]=[];
+  r.items.forEach(it=>{const gen=GENRES[it.g];const x=PX(it.lng),y=PY(it.lat);pts.push([x,y]);regionLL[r.id].push([it.lat,it.lng]);
     const g=document.createElementNS(NS,'g');g.setAttribute('class','pin-g');
     g.innerHTML=`<circle class="ring" r="16" cy="-15"></circle><path class="pin-body" d="M0 0 L -7.5 -12 A 10.5 10.5 0 1 1 7.5 -12 Z" fill="${gen.color}"></path><text y="-11.5">${gen.icon}</text>`;
     pinsG.appendChild(g);
     const p={g,x,y,rid:r.id,name:it.n,jp:it.jp,sub:gen.label+(it.sub?' · '+it.sub:''),gkey:it.g,lat:it.lat,lng:it.lng};
-    g.addEventListener('click',ev=>{ev.stopPropagation();select(p);});
-    allPins.push(p);
-  });
-  if(pts.length){
-    const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]),pad=30;
-    const zx=Math.min(...xs)-pad,zy=Math.min(...ys)-pad;
-    const z=document.createElementNS(NS,'rect');
-    Object.entries({x:zx,y:zy,width:Math.max(...xs)-zx+pad,height:Math.max(...ys)-zy+pad,rx:18}).forEach(([k,v])=>z.setAttribute(k,v));
-    z.setAttribute('fill',r.hex);z.setAttribute('fill-opacity','0.10');z.setAttribute('stroke',r.hex);z.setAttribute('stroke-width','2.5');z.setAttribute('stroke-dasharray','7 6');
-    z.style.display='none';zonesG.appendChild(z);zoneByRegion[r.id]=z;
-  }
-});
+    g.addEventListener('click',ev=>{ev.stopPropagation();select(p);});allPins.push(p);});
+  if(pts.length){const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]),pad=30;const zx=Math.min(...xs)-pad,zy=Math.min(...ys)-pad;
+    const z=document.createElementNS(NS,'rect');Object.entries({x:zx,y:zy,width:Math.max(...xs)-zx+pad,height:Math.max(...ys)-zy+pad,rx:18}).forEach(([k,v])=>z.setAttribute(k,v));
+    z.setAttribute('fill',r.hex);z.setAttribute('fill-opacity','0.10');z.setAttribute('stroke',r.hex);z.setAttribute('stroke-width','2.5');z.setAttribute('stroke-dasharray','7 6');z.style.display='none';zonesG.appendChild(z);zoneByRegion[r.id]=z;}});
 (()=>{const x=PX(HOTEL.lng),y=PY(HOTEL.lat);const g=document.createElementNS(NS,'g');g.setAttribute('class','hotel-pin');g.setAttribute('transform',`translate(${x},${y})`);g.innerHTML=`<circle r="13" fill="#c9a227" stroke="#fff" stroke-width="3"/><path d="M0,-7 L2,-2 L7,-2 L3,1 L4,6 L0,3 L-4,6 L-3,1 L-7,-2 L-2,-2 Z" fill="#fff"/>`;hotelG.appendChild(g);hotelG._x=x;hotelG._y=y;})();
-
-/* 범례: 장르 색 (주요 6개만 표시 + 나머지) */
-document.getElementById('legend').innerHTML='<span class="dot" style="background:#c9a227"></span>★ 숙소<br>'+
-  ['sushi','ramen','izakaya','cafe','bar','bonus'].map(k=>`<span class="dot" style="background:${GENRES[k].color}"></span>${GENRES[k].icon} ${GENRES[k].label}`).join('<br>')+'<br><span style="color:var(--muted)">+ 우동·카레·야끼토리·함바그…</span>';
-
+document.getElementById('legend').innerHTML='<span class="dot" style="background:#c9a227"></span>★ 숙소<br>'+['sushi','ramen','izakaya','select','vintage','bonus'].map(k=>`<span class="dot" style="background:${GENRES[k].color}"></span>${GENRES[k].icon} ${GENRES[k].label}`).join('<br>');
 let vb={x:0,y:0,w:W,h:H};
 function applyVB(){svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`);const k=Math.min(1.6,Math.max(.5,vb.w/W));allPins.forEach(p=>p.g.setAttribute('transform',`translate(${p.x},${p.y}) scale(${k})`));hotelG.setAttribute('transform',`translate(${hotelG._x},${hotelG._y}) scale(${k})`);}
 function clampVB(){vb.w=Math.min(W,Math.max(180,vb.w));vb.h=vb.w*H/W;vb.x=Math.min(W-vb.w,Math.max(0,vb.x));vb.y=Math.min(H-vb.h,Math.max(0,vb.y));}
@@ -476,74 +217,51 @@ document.getElementById('zout').onclick=()=>zoomAt(vb.x+vb.w/2,vb.y+vb.h/2,1.30)
 const touches=new Map();let dragStart=null,lastDist=0;
 svg.addEventListener('pointerdown',e=>{svg.setPointerCapture(e.pointerId);touches.set(e.pointerId,{x:e.clientX,y:e.clientY});if(touches.size===1)dragStart={cx:e.clientX,cy:e.clientY,vx:vb.x,vy:vb.y};if(touches.size===2){const t=[...touches.values()];lastDist=Math.hypot(t[0].x-t[1].x,t[0].y-t[1].y);dragStart=null;}});
 svg.addEventListener('pointermove',e=>{if(!touches.has(e.pointerId))return;touches.set(e.pointerId,{x:e.clientX,y:e.clientY});const rect=svg.getBoundingClientRect();if(touches.size===1&&dragStart){const sx=vb.w/rect.width;vb.x=dragStart.vx-(e.clientX-dragStart.cx)*sx;vb.y=dragStart.vy-(e.clientY-dragStart.cy)*sx;clampVB();applyVB();}else if(touches.size===2){const t=[...touches.values()];const d=Math.hypot(t[0].x-t[1].x,t[0].y-t[1].y);if(lastDist>0){const mid=svgPoint((t[0].x+t[1].x)/2,(t[0].y+t[1].y)/2);zoomAt(mid.x,mid.y,lastDist/d);}lastDist=d;}});
-const endT=e=>{touches.delete(e.pointerId);dragStart=null;lastDist=0;};
-svg.addEventListener('pointerup',endT);svg.addEventListener('pointercancel',endT);
-
+const endT=e=>{touches.delete(e.pointerId);dragStart=null;lastDist=0;};svg.addEventListener('pointerup',endT);svg.addEventListener('pointercancel',endT);
 let mode='svg',lmap=null;
-function tryLeaflet(){const css=document.createElement('link');css.rel='stylesheet';css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';document.head.appendChild(css);const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';s.onload=initLeaflet;document.head.appendChild(s);}
-function initLeaflet(){try{const div=document.getElementById('lmap');lmap=L.map(div,{scrollWheelZoom:true});const tile=L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'&copy; OSM &copy; CARTO',maxZoom:19});let swapped=false;tile.once('load',()=>{if(swapped)return;swapped=true;div.style.visibility='visible';svg.style.visibility='hidden';document.getElementById('zoom-btns').style.display='none';document.getElementById('netbadge').textContent='🗺 실제 지도 (온라인)';mode='leaflet';buildLeafletLayer();lmap.invalidateSize();lmap.fitBounds(allPins.map(p=>[p.lat,p.lng]),{padding:[26,26]});highlight(currentRegion);});tile.addTo(lmap);lmap.setView([35.675,139.745],12);setTimeout(()=>{if(!swapped){try{lmap.remove()}catch(e){}lmap=null;}},8000);}catch(e){}}
+function tryLeaflet(){const css=document.createElement('link');css.rel='stylesheet';css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';document.head.appendChild(css);const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';s.onload=initLeaflet;s.onerror=()=>{document.getElementById('netbadge').textContent='🖼 그림지도 (지도 로드 불가)';};document.head.appendChild(s);}
+function initLeaflet(){try{const div=document.getElementById('lmap');lmap=L.map(div,{scrollWheelZoom:true,zoomControl:true});const tile=L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'&copy; OSM &copy; CARTO',maxZoom:19});let swapped=false;
+  const swap=()=>{if(swapped)return;swapped=true;div.style.visibility='visible';svg.style.visibility='hidden';document.getElementById('zoom-btns').style.display='none';document.getElementById('netbadge').textContent='🗺 실제 지도 (온라인)';mode='leaflet';buildLeafletLayer();lmap.invalidateSize();fitDay(currentDay);highlight(currentRegion);};
+  tile.on('tileload',swap);tile.on('load',swap);
+  tile.addTo(lmap);lmap.setView([35.675,139.745],12);
+  setTimeout(()=>{lmap&&lmap.invalidateSize();},300);
+  setTimeout(()=>{if(!swapped){try{lmap.remove()}catch(e){}lmap=null;document.getElementById('netbadge').textContent='🖼 그림지도 (오프라인)';}},9000);}catch(e){}}
 const lZones={};
-function buildLeafletLayer(){allPins.forEach(p=>{const gen=GENRES[p.gkey];const icon=L.divIcon({className:'',html:`<div class="lpin" style="background:${gen.color}"><span>${gen.icon}</span></div>`,iconSize:[26,26],iconAnchor:[13,24],popupAnchor:[0,-22]});p.lm=L.marker([p.lat,p.lng],{icon}).addTo(lmap).bindPopup(`<b>${p.name}</b><span class="jp">${p.jp}</span> · ${p.sub}`);p.lm.on('click',()=>select(p));});L.marker([HOTEL.lat,HOTEL.lng],{icon:L.divIcon({className:'',html:'<div class="lhotel">★</div>',iconSize:[30,30],iconAnchor:[15,15]}),zIndexOffset:2000}).addTo(lmap).bindPopup('<b>미츠이 가든 호텔 긴자 프리미어</b>🏨 베이스캠프');REGIONS.forEach(r=>{if(regionLL[r.id].length)lZones[r.id]=L.rectangle(L.latLngBounds(regionLL[r.id]).pad(0.25),{color:r.hex,weight:2,dashArray:'6 6',fillColor:r.hex,fillOpacity:0.07,interactive:false});});}
-tryLeaflet();
-
+function buildLeafletLayer(){allPins.forEach(p=>{const gen=GENRES[p.gkey];const icon=L.divIcon({className:'',html:`<div class="lpin" style="background:${gen.color}"><span>${gen.icon}</span></div>`,iconSize:[26,26],iconAnchor:[13,24],popupAnchor:[0,-22]});p.lm=L.marker([p.lat,p.lng],{icon}).addTo(lmap).bindPopup(`<b>${p.name}</b><span class="jp">${p.jp}</span> · ${p.sub}`);p.lm.on('click',()=>select(p));});L.marker([HOTEL.lat,HOTEL.lng],{icon:L.divIcon({className:'',html:'<div class="lhotel">★</div>',iconSize:[30,30],iconAnchor:[15,15]}),zIndexOffset:2000}).addTo(lmap).bindPopup('<b>미츠이 가든 호텔 긴자 프리미어</b>🏨 베이스캠프');REGIONS.forEach(r=>{if(regionLL[r.id].length)lZones[r.id]=L.rectangle(L.latLngBounds(regionLL[r.id]).pad(0.25),{color:r.hex,weight:2,dashArray:'6 6',fillColor:r.hex,fillOpacity:0.06,interactive:false});});}
+function fitDay(dayId){const day=DAYS.find(d=>d.id===dayId);if(!day)return;const pts=[];day.regions.forEach(rid=>(regionLL[rid]||[]).forEach(ll=>pts.push(ll)));if(!pts.length)return;if(mode==='leaflet'&&lmap){lmap.fitBounds(pts,{padding:[30,30],maxZoom:14});}else{const xs=pts.map(ll=>PX(ll[1])),ys=pts.map(ll=>PY(ll[0]));const pad=80;const minx=Math.min(...xs)-pad,maxx=Math.max(...xs)+pad,miny=Math.min(...ys)-pad,maxy=Math.max(...ys)+pad;vb.w=Math.max(maxx-minx,(maxy-miny)*W/H);vb.h=vb.w*H/W;vb.x=(minx+maxx)/2-vb.w/2;vb.y=(miny+maxy)/2-vb.h/2;clampVB();applyVB();}}
 const infobar=document.getElementById('infobar');
-let selected=null,currentRegion=REGIONS[0].id;
+let selected=null,currentRegion=REGIONS[0].id,currentDay=DAYS[0].id;
 function select(p){if(selected&&selected.g)selected.g.classList.remove('sel');selected=p;p.g.classList.add('sel');const gen=GENRES[p.gkey];infobar.innerHTML=`<span class="cat" style="background:${gen.color}">${gen.icon} ${gen.label}</span><b>${p.name}</b><button class="jpname" onclick="copyText('${p.jp.replace(/'/g,"\\'")}')">${p.jp}<span class="ic">⧉ 복사</span></button><span style="color:var(--muted)">${p.sub}</span><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.jp)}" target="_blank" rel="noopener">구글지도 ↗</a>`;if(mode==='leaflet'&&lmap&&p.lm){if(!lmap.getBounds().contains([p.lat,p.lng]))lmap.panTo([p.lat,p.lng]);p.lm.openPopup();}else{if(p.x<vb.x||p.x>vb.x+vb.w||p.y<vb.y||p.y>vb.y+vb.h){vb.x=p.x-vb.w/2;vb.y=p.y-vb.h/2;clampVB();applyVB();}}}
 function highlight(id){currentRegion=id;allPins.forEach(p=>{const dim=p.rid!==id;p.g.classList.toggle('dim',dim);if(p.lm){const el=p.lm.getElement();if(el){el.querySelector('.lpin').classList.toggle('dim',dim);p.lm.setZIndexOffset(dim?0:1000);if(dim)p.lm.closePopup();}}});Object.entries(zoneByRegion).forEach(([rid,z])=>z.style.display=rid===id?'':'none');if(mode==='leaflet'&&lmap)Object.entries(lZones).forEach(([rid,z])=>{rid===id?z.addTo(lmap):lmap.removeLayer(z);});}
 
-/* ───── 패널 렌더: 장르별 그룹핑 ───── */
-const tabsEl=document.getElementById('tabs'),panelsEl=document.getElementById('panels');
-REGIONS.forEach((r,i)=>{
-  const tb=document.createElement('button');tb.className='tab'+(i===0?' on':'');tb.dataset.rid=r.id;
-  tb.innerHTML=`<span class="string"></span><span class="lantern" style="--rc:${r.hex}"><span class="kanji">${r.kanji}</span>${r.tab}<small>${r.tabSub}</small></span>`;
-  tb.onclick=()=>activate(r.id);tabsEl.appendChild(tb);
-  const p=document.createElement('section');p.className='panel'+(i===0?' on':'');p.id='panel-'+r.id;
-  let html=`
-    <div class="region-head"><div class="kanji-tag" style="background:${r.hex}">${r.kanji}</div><div><div class="sub" style="color:${r.hex}">${r.sub}</div><h2>${r.title}</h2></div></div>
-    <p class="intro">${r.intro}<br><span class="joke">${r.joke}</span></p>
-    <div class="route" style="--rc:${r.hex}"><span class="from">${r.route.from}</span><span class="line">${r.route.line}</span><span style="color:var(--muted)">${r.route.detail}</span><span class="time">${r.route.time}</span></div>
-    <div class="bonus">⭐ <b>지역 보너스</b> — ${r.bonus} <button class="jpname" data-copy="${r.bonusJp}" style="margin-left:4px">${r.bonusJp}<span class="ic">⧉</span></button></div>`;
-  /* 장르별 그룹핑 (정의 순서 유지) */
-  const order=Object.keys(GENRES);
-  const groups={};
-  r.items.forEach(it=>{(groups[it.g]=groups[it.g]||[]).push(it);});
-  order.forEach(gk=>{
-    if(!groups[gk])return;const gen=GENRES[gk];
-    html+=`<div class="genre-block">
-      <div class="genre-head"><span class="ic" style="background:${gen.color}">${gen.icon}</span><h3>${gen.label}</h3><span class="jp">${gen.jp}</span><span class="rule"></span></div>
-      <div class="cards">${groups[gk].map(it=>`
-        <div class="card" style="--gc:${gen.color}" data-r="${r.id}" data-lat="${it.lat}" data-lng="${it.lng}" tabindex="0">
-          ${it.seal?'<div class="seal jp">必食</div>':''}
-          <span class="cat-tag" style="background:${gen.color}">${gen.icon} ${gen.label}</span>
-          ${thumb(it.th)}
-          <div class="card-main">
-            <div class="name">${it.n} <small>${it.sub||''}</small></div>
-            <button class="jpname" data-copy="${it.jp}">${it.jp}<span class="ic">⧉ 복사</span></button>
-            <div class="desc">${it.d}</div>
-            <div class="meta">${(it.b||[]).map(b=>{const cls=b==='必食'?'star':((b.includes('맥주')||b.includes('탭'))?'beer':((b.includes('예약')||b.includes('웨이팅')||b.includes('행렬')||b.includes('현금')||b.includes('휴무')||b.includes('정리권'))?'warn':''));return `<span class="badge ${cls}">${b}</span>`;}).join('')}
-              <a class="gmap" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(it.jp)}" target="_blank" rel="noopener">구글지도 ↗</a>
-            </div>
-          </div>
-        </div>`).join('')}</div>
-    </div>`;
-  });
-  p.innerHTML=html;panelsEl.appendChild(p);
-});
-
+/* 상위탭(일차) + 하위탭(지역) 렌더 */
+const daynavEl=document.getElementById('daynav'),drouteEl=document.getElementById('droute-in'),tabsEl=document.getElementById('tabs'),panelsEl=document.getElementById('panels');
+DAYS.forEach((d,i)=>{const b=document.createElement('button');b.className='daytab'+(i===0?' on':'');b.dataset.day=d.id;b.style.setProperty('--dc',d.color);b.innerHTML=`${d.label}<small>${d.sub}</small><span class="dd">${d.date}</span>`;b.onclick=()=>activateDay(d.id);daynavEl.appendChild(b);});
+/* 패널은 지역 전체를 한 번 렌더, 표시는 토글 */
+REGIONS.forEach(r=>{const p=document.createElement('section');p.className='panel';p.id='panel-'+r.id;
+  let html=`<div class="region-head"><div class="kanji-tag" style="background:${r.hex}">${r.kanji}</div><div><div class="sub" style="color:${r.hex}">${r.sub}</div><h2>${r.title}</h2></div></div>
+  <p class="intro">${r.intro}<br><span class="joke">${r.joke}</span></p>
+  <div class="route" style="--rc:${r.hex}"><span class="from">${r.route.from}</span><span class="line">${r.route.line}</span><span style="color:var(--muted)">${r.route.detail}</span><span class="time">${r.route.time}</span></div>
+  <div class="bonus">⭐ <b>지역 보너스</b> — ${r.bonus} <button class="jpname" data-copy="${r.bonusJp}" style="margin-left:4px">${r.bonusJp}<span class="ic">⧉</span></button></div>`;
+  const order=Object.keys(GENRES),groups={};r.items.forEach(it=>{(groups[it.g]=groups[it.g]||[]).push(it);});
+  order.forEach(gk=>{if(!groups[gk])return;const gen=GENRES[gk];
+    html+=`<div class="genre-block"><div class="genre-head"><span class="ic" style="background:${gen.color}">${gen.icon}</span><h3>${gen.label}</h3><span class="jp">${gen.jp}</span><span class="rule"></span></div><div class="cards">`+
+    groups[gk].map(it=>`<div class="card" style="--gc:${gen.color}" data-r="${r.id}" data-lat="${it.lat}" data-lng="${it.lng}" tabindex="0">${it.seal?'<div class="seal jp">必食</div>':''}<span class="cat-tag" style="background:${gen.color}">${gen.icon} ${gen.label}</span>${thumb(it.th)}<div class="card-main"><div class="name">${it.n} <small>${it.sub||''}</small></div><button class="jpname" data-copy="${it.jp}">${it.jp}<span class="ic">⧉ 복사</span></button><div class="desc">${it.d}</div><div class="meta">`+
+    (it.b||[]).map(b=>{const cls=b==='必食'?'star':((b.includes('맥주')||b.includes('탭'))?'beer':((b.includes('예약')||b.includes('웨이팅')||b.includes('행렬')||b.includes('현금')||b.includes('휴무')||b.includes('정리권'))?'warn':''));return `<span class="badge ${cls}">${b}</span>`;}).join('')+
+    `<a class="gmap" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(it.jp)}" target="_blank" rel="noopener">구글지도 ↗</a></div></div></div>`).join('')+`</div></div>`;});
+  p.innerHTML=html;panelsEl.appendChild(p);});
 const note=document.createElement('div');note.className='note';
-note.innerHTML=`
-  <h4>여행의 부칙 <span class="jp">旅之附則</span></h4>
-  <p><b>항공:</b> 나리타 7/22 10:50 도착 · 7/25 19:45 출발 (마지막날 15시까지 도쿄 가용).</p>
-  <p><b>예약 핀 2개:</b> 쿠베이 스시 오마카세(한 달 전 마감 리스크, 최우선) · teamLab Planets(주말 오전 슬롯). 몬자·함바그 인기점도 정리권/웹예약 확인.</p>
-  <p><b>요일 함정:</b> 쿠베이 일·월 휴무 / Yebisu Brewery 화요일 휴무 (우리 일정 수~토라 무사 통과).</p>
-  <p><b>폭염 룰:</b> 야외는 9시 전·16시 후만. 접이식 우산 상시 휴대.</p>
-  <div class="law">부부평화유지법 — 제1조: 한낮 야외 도보 이동을 금한다. 제2조: "한 입만"은 두 입까지 합법으로 본다. 제3조: 분실물 수색 1순위는 남편, 수색 장소는 양조장으로 한다. 제4조: 시모키타자와에서의 "한 집만"은 법적 효력이 없다.</div>`;
+note.innerHTML=`<h4>여행의 부칙 <span class="jp">旅之附則</span></h4><p><b>항공:</b> 나리타 7/22 10:50 도착 · 7/25 19:45 출발. 4일차는 와이프 새 숙소에 짐 맡기고 가볍게.</p><p><b>예약 핀 2개:</b> 쿠베이 스시 오마카세(한 달 전 마감, 최우선) · teamLab Planets(2일차 8~12시 입장권 확보됨).</p><p><b>요일 함정:</b> 쿠베이 일·월 휴무 / Yebisu Brewery 화요일 휴무 (일정 수~토라 무사).</p><p><b>폭염 룰:</b> 야외는 9시 전·16시 후만. 접이식 우산 상시 휴대.</p><div class="law">부부평화유지법 — 제1조: 한낮 야외 도보 이동을 금한다. 제2조: "한 입만"은 두 입까지 합법으로 본다. 제3조: 분실물 수색 1순위는 남편, 수색 장소는 양조장으로 한다. 제4조: 시모키타자와에서의 "한 집만"은 법적 효력이 없다. 제5조: KAPITAL·빔즈에서 "일본 한정"이라는 단어는 판단력을 일시 정지시킨다.</div>`;
 panelsEl.appendChild(note);
 
-function activate(id){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.rid===id));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='panel-'+id));highlight(id);}
+function showRegionTabs(dayId){const day=DAYS.find(d=>d.id===dayId);tabsEl.innerHTML='';day.regions.forEach((rid,i)=>{const r=regionById[rid];const tb=document.createElement('button');tb.className='tab'+(i===0?' on':'');tb.dataset.rid=rid;tb.innerHTML=`<span class="string"></span><span class="lantern" style="--rc:${r.hex}"><span class="kanji">${r.kanji}</span>${r.tab}<small>${r.tabSub}</small></span>`;tb.onclick=()=>activateRegion(rid);tabsEl.appendChild(tb);});}
+function activateRegion(rid){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.rid===rid));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='panel-'+rid));highlight(rid);}
+function activateDay(dayId){currentDay=dayId;const day=DAYS.find(d=>d.id===dayId);document.querySelectorAll('.daytab').forEach(t=>t.classList.toggle('on',t.dataset.day===dayId));
+  drouteEl.innerHTML=`<div class="droute-badge" style="background:${day.color}">${day.label.replace('일차','')}<small>${day.label.includes('α')?'':'일차'}</small></div><div class="droute-body"><div class="t">${day.sub} <span class="date">${day.date}</span></div><div class="desc">${day.route}</div></div>`;
+  showRegionTabs(dayId);
+  const first=day.regions[0];activateRegion(first);fitDay(dayId);}
+
 panelsEl.addEventListener('click',e=>{const jb=e.target.closest('.jpname');if(jb){e.stopPropagation();copyText(jb.dataset.copy);return;}if(e.target.closest('a'))return;const el=e.target.closest('.card');if(!el)return;const lat=+el.dataset.lat,lng=+el.dataset.lng;const hit=allPins.find(p=>p.rid===el.dataset.r&&Math.abs(p.lat-lat)<1e-9&&Math.abs(p.lng-lng)<1e-9);if(hit){select(hit);document.getElementById('map-frame').scrollIntoView({behavior:'smooth',block:'center'});}});
 
-applyVB();highlight(REGIONS[0].id);
-</script>
-</body>
-</html>
+applyVB();activateDay(DAYS[0].id);
+</script></body></html>
